@@ -1,10 +1,9 @@
 name: CI
 
 # Single workflow:
-# - PR / any push: build the plugin
+# - PR / any push: build the JetBrains plugin + package Zed theme + iTerm preset
 # - master push (or manual dispatch): tag vYYYY.MM.DD.<commit_count>, GitHub Release
-#   with zip + updatePlugins.xml for JetBrains custom plugin repository updates
-
+#   with plugin zip + updatePlugins.xml + hiberbee-zed-theme-*.zip + Hiberbee.itermcolors
 on:
   push:
     branches: [master]
@@ -76,6 +75,21 @@ jobs:
           sha256sum "$f" | tee "${f}.sha256"
           test -f build/updatePlugins.xml
 
+      - name: Package Zed theme extension
+        id: zed
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          version="${{ steps.ver.outputs.version }}"
+          zed_zip="hiberbee-zed-theme-${version}.zip"
+          # Root of zip must contain extension.toml (Zed install-dev-extension layout)
+          (cd src/zed && zip -r "${GITHUB_WORKSPACE}/${zed_zip}" extension.toml themes README.md)
+          sha256sum "${zed_zip}" | tee "${zed_zip}.sha256"
+          # Standalone theme JSON for ~/.config/zed/themes drop-in
+          cp src/zed/themes/hiberbee.json "hiberbee-zed-theme-${version}.json"
+          # iTerm2 preset alongside terminal assets
+          cp src/iterm/Hiberbee.itermcolors "Hiberbee.itermcolors"
+
       - uses: actions/upload-artifact@v4
         if: github.event_name == 'pull_request'
         with:
@@ -83,6 +97,10 @@ jobs:
           path: |
             src/intellij/build/distributions/${{ steps.ver.outputs.zip }}
             src/intellij/build/updatePlugins.xml
+            hiberbee-zed-theme-${{ steps.ver.outputs.version }}.zip
+            hiberbee-zed-theme-${{ steps.ver.outputs.version }}.zip.sha256
+            hiberbee-zed-theme-${{ steps.ver.outputs.version }}.json
+            Hiberbee.itermcolors
           if-no-files-found: error
 
       - name: Tag and publish GitHub Release
@@ -96,6 +114,7 @@ jobs:
           tag="${{ steps.ver.outputs.tag }}"
           version="${{ steps.ver.outputs.version }}"
           zip_name="${{ steps.ver.outputs.zip }}"
+          zed_zip="hiberbee-zed-theme-${version}.zip"
 
           if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
             echo "Tag ${tag} already exists — updating release assets only."
@@ -106,18 +125,22 @@ jobs:
             git push origin "refs/tags/${tag}"
           fi
 
+          assets=(
+            "src/intellij/build/distributions/${zip_name}"
+            "src/intellij/build/distributions/${zip_name}.sha256"
+            "src/intellij/build/updatePlugins.xml"
+            "${zed_zip}"
+            "${zed_zip}.sha256"
+            "hiberbee-zed-theme-${version}.json"
+            "Hiberbee.itermcolors"
+          )
+
           # Create or replace release assets (idempotent enough for re-runs)
           if gh release view "${tag}" >/dev/null 2>&1; then
-            gh release upload "${tag}" \
-              "src/intellij/build/distributions/${zip_name}" \
-              "src/intellij/build/distributions/${zip_name}.sha256" \
-              "src/intellij/build/updatePlugins.xml" \
-              --clobber
+            gh release upload "${tag}" "${assets[@]}" --clobber
           else
             gh release create "${tag}" \
               --title "${tag}" \
               --generate-notes \
-              "src/intellij/build/distributions/${zip_name}" \
-              "src/intellij/build/distributions/${zip_name}.sha256" \
-              "src/intellij/build/updatePlugins.xml"
+              "${assets[@]}"
           fi

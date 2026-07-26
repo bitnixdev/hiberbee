@@ -1,0 +1,7 @@
+id = "hiberbee"
+name = "Hiberbee"
+schema_version = 1
+version = "0.1.0"
+authors = ["bitnix (fork of Hiberbee)"]
+description = "Hiberbee dark theme for Zed — ported from the Hiberbee terminal/IDE palette"
+repository = "https://github.com/bitnixdev/hiberbee"
