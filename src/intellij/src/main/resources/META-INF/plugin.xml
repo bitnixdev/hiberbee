@@ -1,7 +1,7 @@
 <idea-plugin require-restart="false" allow-bundled-update="true">
   <id>com.hiberbee.intellij.hiberbee-theme</id>
-  <vendor email="vlad@hiberbee.com" url="https://github.com/bitnixdev/hiberbee">Hiberbee</vendor>
-  <name>Hiberbee Theme</name>
+  <vendor email="vlad@hiberbee.com" url="https://github.com/bitnixdev/hiberbee">bitnix</vendor>
+  <name>Hiberbee (bitnix)</name>
   <description><![CDATA[
         <p>Vivid, color-intensive dark theme for Jetbrains IDE with consolidated color code for all programming
             languages.</p><b>Features</b>:
@@ -43,7 +43,7 @@
   <idea-version since-build="231"/>
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
-    <themeProvider id="HiberbeeDark" path="/themes/HiberbeeDark.theme.json" />
-    <bundledColorScheme id="Hiberbee Dark" path="/colors/Dark.xml"/>
+    <themeProvider id="HiberbeeBitnixDark" path="/themes/HiberbeeDark.theme.json" />
+    <bundledColorScheme id="Hiberbee (bitnix)" path="/colors/Dark.xml"/>
   </extensions>
 </idea-plugin>

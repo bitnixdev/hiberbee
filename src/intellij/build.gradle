@@ -106,7 +106,7 @@ tasks.register('generateUpdatePluginsXml', GenerateUpdatePluginsXml) {
   )
   vendorEmail.set('vlad@hiberbee.com')
   vendorUrl.set('https://github.com/bitnixdev/hiberbee')
-  vendorName.set('Hiberbee')
+  vendorName.set('bitnix')
   descriptionHtml.set(
     'Vivid, color-intensive dark theme for JetBrains IDEs with a consolidated color map across languages.'
   )

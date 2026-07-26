@@ -10,7 +10,7 @@ Custom plugin repository (updates from GitHub Releases):
 https://github.com/bitnixdev/hiberbee/releases/latest/download/updatePlugins.xml
 ```
 
-`Settings → Plugins → ⚙ → Manage Plugin Repositories…` → add the URL → install **Hiberbee Theme**.
+`Settings → Plugins → ⚙ → Manage Plugin Repositories…` → add the URL → install **Hiberbee (bitnix)**.
 
 Or install the zip from [releases](https://github.com/bitnixdev/hiberbee/releases/latest) via **Install Plugin from Disk…**.
 

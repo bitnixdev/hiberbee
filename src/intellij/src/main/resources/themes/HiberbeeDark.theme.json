@@ -1,9 +1,9 @@
 {
-  "name": "Hiberbee Dark",
-  "author": "Vlad Volkov",
+  "name": "Hiberbee (bitnix)",
+  "author": "bitnix (fork of Hiberbee)",
   "dark": true,
   "parentTheme": "Darcula",
-  "editorScheme": "Hiberbee Dark",
+  "editorScheme": "Hiberbee (bitnix)",
   "colors": {
     "dark1": "#070605",
     "dark2": "#121110",
