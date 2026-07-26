@@ -1,5 +1,6 @@
 <idea-plugin require-restart="false" allow-bundled-update="true">
-  <id>com.hiberbee.intellij.hiberbee-theme</id>
+  <!-- Unique id so this fork coexists with Marketplace "Hiberbee Theme" (com.hiberbee.intellij.hiberbee-theme). -->
+  <id>dev.bitnix.hiberbee</id>
   <vendor email="vlad@hiberbee.com" url="https://github.com/bitnixdev/hiberbee">bitnix</vendor>
   <name>Hiberbee (bitnix)</name>
   <description><![CDATA[
