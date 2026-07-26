@@ -371,7 +371,6 @@
     <option name="COFFEESCRIPT.BLOCK_COMMENT">
       <value>
         <option name="FOREGROUND" value="727072" />
-        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="COFFEESCRIPT.BOOLEAN">
@@ -441,7 +440,6 @@
     <option name="COFFEESCRIPT.LINE_COMMENT">
       <value>
         <option name="FOREGROUND" value="727072" />
-        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="COFFEESCRIPT.LOCAL_VARIABLE">
@@ -820,7 +818,6 @@
     <option name="DEFAULT_DOC_COMMENT">
       <value>
         <option name="FOREGROUND" value="ccbfaf" />
-        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG">
@@ -832,7 +829,6 @@
     <option name="DEFAULT_DOC_COMMENT_TAG_VALUE">
       <value>
         <option name="FOREGROUND" value="ee9b70" />
-        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEFAULT_DOC_MARKUP">
@@ -31961,7 +31957,6 @@
     <option name="OC.LINE_COMMENT">
       <value>
         <option name="FOREGROUND" value="727072" />
-        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="OC.MACRONAME">
@@ -32349,7 +32344,6 @@
     <option name="ReSharper.ASP_NET_COMMENT">
       <value>
         <option name="FOREGROUND" value="727072" />
-        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="ReSharper.ASP_NET_ENTITY_REFERENCE">
@@ -32905,7 +32899,6 @@
     <option name="org.rust.DOC_EMPHASIS">
       <value>
         <option name="FOREGROUND" value="808080" />
-        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="org.rust.DOC_STRONG">
