@@ -1,0 +1,5078 @@
+{
+  "meta": {
+    "description": "Hiberbee color recommendations for every todo.md expansion gap",
+    "palette_source": "src/intellij/src/main/resources/themes/HiberbeeDark.theme.json#colors",
+    "scheme_source": "src/intellij/src/main/resources/colors/Dark.xml",
+    "rules": [
+      "Use only Hiberbee palette tokens or hex already present in Dark.xml",
+      "Prefer baseAttributes to DEFAULT_* when role matches",
+      "Do not copy Dracula/Islands hex"
+    ],
+    "counts": {
+      "explicit": 134,
+      "pin_empty": 19,
+      "baseAttributes": 187,
+      "process": 22,
+      "color": 22,
+      "theme_json": 1
+    },
+    "missing_attrs_total": 275,
+    "missing_attrs_mapped": 275,
+    "missing_colors_total": 22,
+    "missing_colors_mapped": 22
+  },
+  "palette": {
+    "dark1": "#070605",
+    "dark2": "#121110",
+    "dark3": "#171615",
+    "dark4": "#222120",
+    "dark5": "#272625",
+    "dark6": "#323130",
+    "dark7": "#373635",
+    "dark8": "#424140",
+    "dark9": "#474645",
+    "dark10": "#525150",
+    "accent": "#ffb900",
+    "green": "#92D923",
+    "greenDark": "#92D923CC",
+    "blueDark": "#253047CC",
+    "blue": "#409cff",
+    "red": "#ff5454",
+    "redDark": "#320f0f",
+    "yellow": "#ffb900",
+    "yellowLight": "#f5d277",
+    "yellowDark": "#ffb900a0",
+    "redBg": "#320f0f",
+    "violetBg": "#302030",
+    "orangeBg": "#403018",
+    "yellowBg": "#303018",
+    "blueBg": "#253047",
+    "greenBg": "#203020",
+    "light1": "#6f6e6d",
+    "light2": "#7f7e7d",
+    "light3": "#8f8e8d",
+    "light4": "#9f9e9d",
+    "light5": "#afaead",
+    "light6": "#bfbebd",
+    "light7": "#cfcecd",
+    "light8": "#dfdedd",
+    "light9": "#efeeed",
+    "light10": "#fffefd"
+  },
+  "role_anchors": {
+    "DEFAULT_LINE_COMMENT": "acacac",
+    "DEFAULT_KEYWORD": "ee7762",
+    "DEFAULT_STRING": "ffd866",
+    "DEFAULT_NUMBER": "78d7",
+    "DEFAULT_FUNCTION_CALL": "92d923",
+    "DEFAULT_METADATA": "ffb900",
+    "DEFAULT_CONSTANT": "f25022",
+    "greenBg": "203020",
+    "redBg": "320f0f",
+    "violetBg": "302030",
+    "blueBg": "253047",
+    "orangeBg": "403018",
+    "dark8": "424140",
+    "dark10": "525150",
+    "light1": "6f6e6d",
+    "light3": "8f8e8d",
+    "FILESTATUS_ADDED": "a9dc76",
+    "FILESTATUS_MODIFIED": "78dce8",
+    "FILESTATUS_CHANGELIST_CONFLICT": "f65f87"
+  },
+  "mappings": [
+    {
+      "key": "DEFAULT_BLOCK_COMMENT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "acacac"
+      },
+      "palette_tokens": [
+        "\u2014 scheme DEFAULT_LINE_COMMENT"
+      ],
+      "rationale": "Match DEFAULT_LINE_COMMENT acacac so block/line comments share Hiberbee muted gray",
+      "phase": "0",
+      "family": "DEFAULT",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_HIGHLIGHTED_REFERENCE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_COLOR": "8f8e8d",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "light3"
+      ],
+      "rationale": "Soft underline with light3 (muted chrome); avoids competing with caret/selection accent",
+      "phase": "0",
+      "family": "DEFAULT",
+      "qa": true
+    },
+    {
+      "key": "DEFAULT_SEMICOLON",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty so punctuation inherits platform; optional later FG=light6 if desired",
+      "phase": "0",
+      "family": "DEFAULT",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_LOCAL_VARIABLE",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty; enables language baseAttributes\u2192DEFAULT_LOCAL_VARIABLE without forcing a color (identifier default)",
+      "phase": "0",
+      "family": "DEFAULT",
+      "qa": false
+    },
+    {
+      "key": "org.rust.ASSOC_FUNCTION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_METHOD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_STATIC_METHOD",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.ASSOC_FUNCTION_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_METHOD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_STATIC_METHOD",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.ATTRIBUTE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_METADATA",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_METADATA",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.BLOCK_COMMENT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_BLOCK_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_BLOCK_COMMENT",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.BRACES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_BRACES",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_BRACES",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.BRACKETS",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_BRACKETS",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_BRACKETS",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.CHAR",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STRING",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_STRING",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.COMMA",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_COMMA",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_COMMA",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.CONSTANT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CONSTANT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_CONSTANT",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.CONST_PARAMETER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CONSTANT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_CONSTANT",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.DOC_CODE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_DOC_MARKUP",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_DOC_MARKUP",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.DOC_COMMENT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_DOC_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_DOC_COMMENT",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.DOC_HEADING",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_DOC_COMMENT_TAG",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_DOC_COMMENT_TAG",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.DOC_LINK",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_DOC_COMMENT_TAG_VALUE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_DOC_COMMENT_TAG_VALUE",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.DOT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_DOT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_DOT",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.ENUM",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_CLASS_NAME",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.ENUM_VARIANT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_STATIC_FIELD",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.EOL_COMMENT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LINE_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_LINE_COMMENT",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.FIELD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INSTANCE_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_INSTANCE_FIELD",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.FORMAT_PARAMETER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_VALID_STRING_ESCAPE",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.FUNCTION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_DECLARATION",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_FUNCTION_DECLARATION",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.FUNCTION_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_FUNCTION_CALL",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.INVALID_STRING_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INVALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_INVALID_STRING_ESCAPE",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.KEYWORD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_KEYWORD",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.METHOD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INSTANCE_METHOD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_INSTANCE_METHOD",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.METHOD_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_FUNCTION_CALL",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.MUT_BINDING",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_IDENTIFIER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_IDENTIFIER",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.MUT_PARAMETER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARAMETER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_PARAMETER",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.MUT_STATIC",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_IDENTIFIER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_IDENTIFIER",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.NUMBER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_NUMBER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_NUMBER",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.OPERATORS",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_OPERATION_SIGN",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_OPERATION_SIGN",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.PARAMETER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARAMETER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_PARAMETER",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.PARENTHESES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARENTHS",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_PARENTHS",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.Q_OPERATOR",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_KEYWORD",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.SEMICOLON",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_SEMICOLON",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_SEMICOLON",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.STATIC",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_IDENTIFIER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_IDENTIFIER",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.STRING",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STRING",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_STRING",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.TRAIT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INTERFACE_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_INTERFACE_NAME",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.TYPE_ALIAS",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_CLASS_NAME",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.UNION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_CLASS_NAME",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.VALID_STRING_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_VALID_STRING_ESCAPE",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.VARIABLE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_IDENTIFIER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Rust plugin synonym \u2192 DEFAULT_IDENTIFIER",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.CFG_DISABLED_CODE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "6f6e6d"
+      },
+      "palette_tokens": [
+        "light1"
+      ],
+      "rationale": "Muted disabled/cfg-out code \u2248 line-number gray light1",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.FORMAT_SPECIFIER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ffb900"
+      },
+      "palette_tokens": [
+        "accent/yellow"
+      ],
+      "rationale": "Format specs are metadata-like; use DEFAULT_METADATA/accent ffb900",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.GENERATED_ITEM",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "7f7e7d"
+      },
+      "palette_tokens": [
+        "light2"
+      ],
+      "rationale": "Generated/muted code \u2248 light2 (folded text family)",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.KEYWORD_UNSAFE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee7762",
+        "FONT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_KEYWORD"
+      ],
+      "rationale": "Unsafe keyword = keyword color + bold",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": true
+    },
+    {
+      "key": "org.rust.LIFETIME",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9896ff",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_STATIC_FIELD"
+      ],
+      "rationale": "Lifetimes are type-ish violet (static_field 9896ff) + italic",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": true
+    },
+    {
+      "key": "org.rust.MACRO",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "92d923",
+        "FONT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "green"
+      ],
+      "rationale": "Macros \u2248 function call green + bold (Hiberbee call = 92d923)",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": true
+    },
+    {
+      "key": "org.rust.SELF_PARAMETER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ff638a",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PREDEFINED_SYMBOL / PY.SELF_PARAMETER"
+      ],
+      "rationale": "self \u2248 predefined/self pink-red (ed005c/ff638a family); use predefined ff638a + italic like PY.SELF",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": false
+    },
+    {
+      "key": "org.rust.UNSAFE_CODE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "302030"
+      },
+      "palette_tokens": [
+        "violetBg"
+      ],
+      "rationale": "Unsafe region tint violetBg (302030); softer than redBg so not error-like",
+      "phase": "1.1",
+      "family": "Rust",
+      "qa": true
+    },
+    {
+      "key": "HTML_TAG",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ff6188"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_TAG / CSS.TAG_NAME"
+      ],
+      "rationale": "HTML tags use tag pink ff6188 (CSS.TAG_NAME / DEFAULT_TAG)",
+      "phase": "1.2",
+      "family": "HTML",
+      "qa": false
+    },
+    {
+      "key": "HTML_ATTRIBUTE_NAME",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "a9dc76"
+      },
+      "palette_tokens": [
+        "\u2014 CSS.ATTRIBUTE-ish green a9dc76"
+      ],
+      "rationale": "Attr names green a9dc76 (align CSS.CLASS_NAME / CUSTOM_KEYWORD2)",
+      "phase": "1.2",
+      "family": "HTML",
+      "qa": false
+    },
+    {
+      "key": "HTML_ATTRIBUTE_VALUE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STRING",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Attribute values are strings",
+      "phase": "1.2",
+      "family": "HTML",
+      "qa": false
+    },
+    {
+      "key": "HTML_ENTITY_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_ENTITY",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "HTML entities \u2192 DEFAULT_ENTITY",
+      "phase": "1.2",
+      "family": "HTML",
+      "qa": false
+    },
+    {
+      "key": "HTML_CUSTOM_TAG_NAME",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "409cff"
+      },
+      "palette_tokens": [
+        "blue"
+      ],
+      "rationale": "Custom elements \u2248 interface blue 409cff (distinct from native tags)",
+      "phase": "1.2",
+      "family": "HTML",
+      "qa": true
+    },
+    {
+      "key": "MATCHED_TAG_NAME",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "424140"
+      },
+      "palette_tokens": [
+        "dark8"
+      ],
+      "rationale": "Matching tag pair subtle fill dark8 (424140)",
+      "phase": "1.2",
+      "family": "HTML",
+      "qa": true
+    },
+    {
+      "key": "XML_TAG",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "a9dc76"
+      },
+      "palette_tokens": [
+        "\u2014 XML_TAG_NAME"
+      ],
+      "rationale": "Match existing XML_TAG_NAME a9dc76",
+      "phase": "1.3",
+      "family": "XML",
+      "qa": false
+    },
+    {
+      "key": "XML_ATTRIBUTE_NAME",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "bfbebd"
+      },
+      "palette_tokens": [
+        "light6"
+      ],
+      "rationale": "XML attrs secondary light6 (bfbebd); less loud than HTML attrs",
+      "phase": "1.3",
+      "family": "XML",
+      "qa": false
+    },
+    {
+      "key": "XML_ENTITY_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_ENTITY",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "XML entities \u2192 DEFAULT_ENTITY",
+      "phase": "1.3",
+      "family": "XML",
+      "qa": false
+    },
+    {
+      "key": "XML_NS_PREFIX",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "57d1eb"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_CLASS_NAME"
+      ],
+      "rationale": "Namespace prefix cyan class-like 57d1eb",
+      "phase": "1.3",
+      "family": "XML",
+      "qa": false
+    },
+    {
+      "key": "XML_CUSTOM_TAG_NAME",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "409cff"
+      },
+      "palette_tokens": [
+        "blue"
+      ],
+      "rationale": "Custom XML tags \u2248 interface blue",
+      "phase": "1.3",
+      "family": "XML",
+      "qa": false
+    },
+    {
+      "key": "PHP_CONSTANT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CONSTANT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "PHP constants \u2192 DEFAULT_CONSTANT",
+      "phase": "1.4",
+      "family": "PHP",
+      "qa": false
+    },
+    {
+      "key": "PHP_HEREDOC_CONTENT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ccbfaf"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_DOC_COMMENT / PHP_HEREDOC_ID"
+      ],
+      "rationale": "Heredoc body muted doc-like ccbfaf (align PHP_HEREDOC_ID family)",
+      "phase": "1.4",
+      "family": "PHP",
+      "qa": false
+    },
+    {
+      "key": "PHP_PARAMETER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARAMETER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "PHP params \u2192 DEFAULT_PARAMETER",
+      "phase": "1.4",
+      "family": "PHP",
+      "qa": false
+    },
+    {
+      "key": "PHP_VAR",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LOCAL_VARIABLE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "PHP vars \u2192 DEFAULT_LOCAL_VARIABLE (pin empty \u2192 identifier)",
+      "phase": "1.4",
+      "family": "PHP",
+      "qa": false
+    },
+    {
+      "key": "PHP_SCRIPTING_BACKGROUND",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "222120"
+      },
+      "palette_tokens": [
+        "dark4"
+      ],
+      "rationale": "PHP island background dark4 (222120) subtle lift; keep existing EFFECT_TYPE if any",
+      "phase": "1.4",
+      "family": "PHP",
+      "qa": true
+    },
+    {
+      "key": "TS.GLOBAL_VARIABLE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_GLOBAL_VARIABLE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "TS globals \u2192 DEFAULT_GLOBAL_VARIABLE",
+      "phase": "1.5",
+      "family": "TypeScript",
+      "qa": false
+    },
+    {
+      "key": "TS_AUDIT_FOLLOWUP",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Process: audit WebStorm TS.* tree after IDE update; not a color key",
+      "phase": "1.5",
+      "family": "TypeScript",
+      "qa": false
+    },
+    {
+      "key": "CSHARP_AUDIT_FOLLOWUP",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Process: audit Rider ReSharper keys; Hiberbee already has 28",
+      "phase": "1.6",
+      "family": "C#",
+      "qa": false
+    },
+    {
+      "key": "CSHARP_KEEP_EXISTING",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Keep existing ReSharper.* colors unchanged",
+      "phase": "1.6",
+      "family": "C#",
+      "qa": false
+    },
+    {
+      "key": "CSHARP_BASEATTR_WHERE_SYNONYM",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Where ReSharper key is synonym, prefer baseAttributes to DEFAULT_*",
+      "phase": "1.6",
+      "family": "C#",
+      "qa": false
+    },
+    {
+      "key": "JS.GLOBAL_FUNCTION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_DECLARATION",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JS global fn \u2192 function decl",
+      "phase": "1.7",
+      "family": "JavaScript",
+      "qa": false
+    },
+    {
+      "key": "JS.GLOBAL_VARIABLE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_GLOBAL_VARIABLE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JS global var \u2192 global variable",
+      "phase": "1.7",
+      "family": "JavaScript",
+      "qa": false
+    },
+    {
+      "key": "JS.INSTANCE_MEMBER_FUNCTION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INSTANCE_METHOD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JS methods \u2192 instance method",
+      "phase": "1.7",
+      "family": "JavaScript",
+      "qa": false
+    },
+    {
+      "key": "JS.LOCAL_VARIABLE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LOCAL_VARIABLE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JS locals \u2192 local variable pin",
+      "phase": "1.7",
+      "family": "JavaScript",
+      "qa": false
+    },
+    {
+      "key": "JS.EXPORTED.VARIABLE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_GLOBAL_VARIABLE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Exported vars \u2248 global",
+      "phase": "1.7",
+      "family": "JavaScript",
+      "qa": false
+    },
+    {
+      "key": "JS.KEYWORD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JS keywords \u2192 DEFAULT_KEYWORD",
+      "phase": "1.7",
+      "family": "JavaScript",
+      "qa": false
+    },
+    {
+      "key": "JS.VALID_STRING_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JS escapes \u2192 valid escape",
+      "phase": "1.7",
+      "family": "JavaScript",
+      "qa": false
+    },
+    {
+      "key": "JS.INVALID_STRING_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INVALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JS bad escapes \u2192 invalid escape",
+      "phase": "1.7",
+      "family": "JavaScript",
+      "qa": false
+    },
+    {
+      "key": "JS.JSX_CLIENT_COMPONENT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9896ff"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_STATIC_FIELD"
+      ],
+      "rationale": "Client components distinct violet 9896ff (not string green)",
+      "phase": "1.7",
+      "family": "JavaScript",
+      "qa": true
+    },
+    {
+      "key": "REGEXP.BRACES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_BRACES",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Regexp braces \u2192 braces",
+      "phase": "2.1",
+      "family": "RegExp",
+      "qa": false
+    },
+    {
+      "key": "REGEXP.BRACKETS",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_BRACKETS",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Regexp brackets \u2192 brackets",
+      "phase": "2.1",
+      "family": "RegExp",
+      "qa": false
+    },
+    {
+      "key": "REGEXP.PARENTHS",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARENTHS",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Regexp parens \u2192 parens",
+      "phase": "2.1",
+      "family": "RegExp",
+      "qa": false
+    },
+    {
+      "key": "REGEXP.META",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Regexp meta \u2192 keyword",
+      "phase": "2.1",
+      "family": "RegExp",
+      "qa": false
+    },
+    {
+      "key": "REGEXP.ESC_CHARACTER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Regexp escapes \u2192 valid escape",
+      "phase": "2.1",
+      "family": "RegExp",
+      "qa": false
+    },
+    {
+      "key": "REGEXP.QUOTE_CHARACTER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Regexp quotes \u2192 escape family",
+      "phase": "2.1",
+      "family": "RegExp",
+      "qa": false
+    },
+    {
+      "key": "REGEXP.COMMA",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_COMMA",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Regexp comma \u2192 comma",
+      "phase": "2.1",
+      "family": "RegExp",
+      "qa": false
+    },
+    {
+      "key": "REGEXP.INVALID_STRING_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INVALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Regexp invalid escape",
+      "phase": "2.1",
+      "family": "RegExp",
+      "qa": false
+    },
+    {
+      "key": "REGEXP.REDUNDANT_ESCAPE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "6f6e6d",
+        "FONT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "light1"
+      ],
+      "rationale": "Redundant escape muted light1 + bold",
+      "phase": "2.1",
+      "family": "RegExp",
+      "qa": false
+    },
+    {
+      "key": "CSS.HASH",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "fd971f"
+      },
+      "palette_tokens": [
+        "\u2014 CSS.COLOR fd971f"
+      ],
+      "rationale": "Color hashes = CSS.COLOR orange fd971f",
+      "phase": "2.2",
+      "family": "CSS",
+      "qa": false
+    },
+    {
+      "key": "CSS.IDENT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "a9dc76"
+      },
+      "palette_tokens": [
+        "\u2014 CSS.CLASS_NAME a9dc76"
+      ],
+      "rationale": "CSS idents \u2248 class names a9dc76",
+      "phase": "2.2",
+      "family": "CSS",
+      "qa": false
+    },
+    {
+      "key": "CSS.PROPERTY_VALUE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PARAMETER"
+      ],
+      "rationale": "Property values warm parameter ee9b70",
+      "phase": "2.2",
+      "family": "CSS",
+      "qa": false
+    },
+    {
+      "key": "SASS_COMMENT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LINE_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "SASS comments \u2192 line comment (no CSS.COMMENT key in HB)",
+      "phase": "2.2",
+      "family": "CSS",
+      "qa": false
+    },
+    {
+      "key": "SASS_IDENTIFIER",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty; inherit / DEFAULT_IDENTIFIER",
+      "phase": "2.2",
+      "family": "CSS",
+      "qa": false
+    },
+    {
+      "key": "SASS_VARIABLE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INSTANCE_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "SASS vars \u2192 instance field",
+      "phase": "2.2",
+      "family": "CSS",
+      "qa": false
+    },
+    {
+      "key": "MARKDOWN_AUTO_LINK",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f65f87",
+        "EFFECT_COLOR": "f65f87",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 MARKDOWN.AUTO_LINK f65f87"
+      ],
+      "rationale": "Mirror existing MARKDOWN.AUTO_LINK",
+      "phase": "2.3",
+      "family": "Markdown",
+      "qa": false
+    },
+    {
+      "key": "MARKDOWN_LINK_TEXT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "78dce8",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 MARKDOWN.EXPLICIT_LINK / MARKDOWN_LINK_DEFINITION"
+      ],
+      "rationale": "Link text cyan 78dce8 like EXPLICIT_LINK",
+      "phase": "2.3",
+      "family": "Markdown",
+      "qa": false
+    },
+    {
+      "key": "MARKDOWN_IMAGE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f65f87"
+      },
+      "palette_tokens": [
+        "\u2014 MARKDOWN.IMAGE"
+      ],
+      "rationale": "Mirror MARKDOWN.IMAGE f65f87",
+      "phase": "2.3",
+      "family": "Markdown",
+      "qa": false
+    },
+    {
+      "key": "MARKDOWN_VERIFY_DOTTED",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Verify underscore vs MARKDOWN.* dotted IDs at runtime",
+      "phase": "2.3",
+      "family": "Markdown",
+      "qa": false
+    },
+    {
+      "key": "CUSTOM_KEYWORD1_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee7762"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_KEYWORD"
+      ],
+      "rationale": "KW1 = keyword coral ee7762 (KW2 green, KW3 string, KW4 violet already)",
+      "phase": "2.4",
+      "family": "Custom",
+      "qa": false
+    },
+    {
+      "key": "CUSTOM_STRING_ATTRIBUTES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STRING",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Custom strings \u2192 string",
+      "phase": "2.4",
+      "family": "Custom",
+      "qa": false
+    },
+    {
+      "key": "CUSTOM_VALID_STRING_ESCAPE_ATTRIBUTES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Custom escapes \u2192 valid",
+      "phase": "2.4",
+      "family": "Custom",
+      "qa": false
+    },
+    {
+      "key": "CUSTOM_INVALID_STRING_ESCAPE_ATTRIBUTES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INVALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Custom invalid escapes",
+      "phase": "2.4",
+      "family": "Custom",
+      "qa": false
+    },
+    {
+      "key": "JSP_DIRECTIVE_NAME",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_METADATA",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JSP directives \u2248 metadata/annotations",
+      "phase": "2.5",
+      "family": "JSP",
+      "qa": false
+    },
+    {
+      "key": "JSP_ATTRIBUTE_NAME",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_ATTRIBUTE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JSP attrs \u2192 DEFAULT_ATTRIBUTE",
+      "phase": "2.5",
+      "family": "JSP",
+      "qa": false
+    },
+    {
+      "key": "JSP_DIRECTIVE_BACKGROUND",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "222120"
+      },
+      "palette_tokens": [
+        "dark4"
+      ],
+      "rationale": "Directive region dark4",
+      "phase": "2.5",
+      "family": "JSP",
+      "qa": false
+    },
+    {
+      "key": "JSP_SCRIPTING_BACKGROUND",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "222120"
+      },
+      "palette_tokens": [
+        "dark4"
+      ],
+      "rationale": "Scripting island dark4 like PHP scripting",
+      "phase": "2.5",
+      "family": "JSP",
+      "qa": false
+    },
+    {
+      "key": "QUTE_BACKGROUND",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "272625"
+      },
+      "palette_tokens": [
+        "dark5"
+      ],
+      "rationale": "Qute injection dark5 gutter-adjacent",
+      "phase": "2.5",
+      "family": "JSP",
+      "qa": false
+    },
+    {
+      "key": "ANNOTATIONS_LAST_COMMIT_COLOR",
+      "kind": "color",
+      "value": "dfdedd",
+      "palette_tokens": [
+        "light8"
+      ],
+      "rationale": "Last-commit author text \u2248 light8 near caret/annotations readability",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "dfdedd"
+      },
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "FILESTATUS_RENAMED",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "78dce8"
+      },
+      "palette_tokens": [
+        "\u2014 FILESTATUS_MODIFIED"
+      ],
+      "rationale": "Renamed \u2248 modified cyan 78dce8",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "FILESTATUS_addedOutside",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "a9dc76"
+      },
+      "palette_tokens": [
+        "\u2014 FILESTATUS_ADDED"
+      ],
+      "rationale": "Added-outside \u2248 added green a9dc76",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "FILESTATUS_changelistConflict",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "f65f87"
+      },
+      "palette_tokens": [
+        "\u2014 FILESTATUS_CHANGELIST_CONFLICT"
+      ],
+      "rationale": "Alias of CHANGELIST_CONFLICT f65f87; add if camelCase still read",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "FILESTATUS_modifiedOutside",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "78dce8"
+      },
+      "palette_tokens": [
+        "\u2014 FILESTATUS_MODIFIED_OUTSIDE"
+      ],
+      "rationale": "Alias of MODIFIED_OUTSIDE 78dce8",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "FILESTATUS_IDEA_SVN_FILESTATUS_OBSTRUCTED",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "ffd866"
+      },
+      "palette_tokens": [
+        "\u2014 FILESTATUS_UNKNOWN"
+      ],
+      "rationale": "Obstructed \u2248 unknown yellow ffd866",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "FILESTATUS_IDEA_SVN_REPLACED",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "a9dc76"
+      },
+      "palette_tokens": [
+        "\u2014 FILESTATUS_ADDED"
+      ],
+      "rationale": "Replaced \u2248 added green",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "IGNORED_DELETED_LINES_BORDER_COLOR",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "727072"
+      },
+      "palette_tokens": [
+        "\u2014 FILESTATUS_DELETED"
+      ],
+      "rationale": "Ignored-deleted border muted 727072",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "IGNORED_MODIFIED_LINES_BORDER_COLOR",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "78dce8"
+      },
+      "palette_tokens": [
+        "\u2014 FILESTATUS_MODIFIED"
+      ],
+      "rationale": "Ignored-modified border cyan 78dce8 (parallel to modified)",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "DOC_COMMENT_GUIDE",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "424140"
+      },
+      "palette_tokens": [
+        "dark8"
+      ],
+      "rationale": "Doc vertical guide subtle dark8",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "DOC_COMMENT_LINK",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "409cff"
+      },
+      "palette_tokens": [
+        "blue"
+      ],
+      "rationale": "Doc links = blue 409cff",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "FOLDED_TEXT_BORDER_COLOR",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "424140"
+      },
+      "palette_tokens": [
+        "dark8"
+      ],
+      "rationale": "Fold border dark8",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "INLINE_REFACTORING_SETTINGS_DEFAULT",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "424140"
+      },
+      "palette_tokens": [
+        "dark8"
+      ],
+      "rationale": "Inline refactor chrome dark8",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "INLINE_REFACTORING_SETTINGS_FOCUSED",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "525150"
+      },
+      "palette_tokens": [
+        "dark10"
+      ],
+      "rationale": "Focused refactor control dark10",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "INLINE_REFACTORING_SETTINGS_HOVERED",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "474645"
+      },
+      "palette_tokens": [
+        "dark9"
+      ],
+      "rationale": "Hover refactor control dark9",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": false
+    },
+    {
+      "key": "NEXT_EDIT.DIFF_AFTER_BACKGROUND",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "203020"
+      },
+      "palette_tokens": [
+        "greenBg"
+      ],
+      "rationale": "Next Edit insertion tint greenBg",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": true
+    },
+    {
+      "key": "NEXT_EDIT.EDIT_RANGE.GUTTER_BACKGROUND",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "302030"
+      },
+      "palette_tokens": [
+        "violetBg"
+      ],
+      "rationale": "Next Edit range gutter violetBg",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": true
+    },
+    {
+      "key": "NEXT_EDIT.EDIT_RANGE.LINE_BACKGROUND",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "171615"
+      },
+      "palette_tokens": [
+        "dark3"
+      ],
+      "rationale": "Next Edit line wash dark3 (deeper than gutter)",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": true
+    },
+    {
+      "key": "NEXT_EDIT.INSIGHT_BACKGROUND",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "302030"
+      },
+      "palette_tokens": [
+        "violetBg"
+      ],
+      "rationale": "Insight panel violetBg",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": true
+    },
+    {
+      "key": "NEXT_EDIT.REMOVAL_BACKGROUND",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "320f0f"
+      },
+      "palette_tokens": [
+        "redBg"
+      ],
+      "rationale": "Removal suggestion redBg",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": true
+    },
+    {
+      "key": "ScrollBar.Mac.thumbColor",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "424140"
+      },
+      "palette_tokens": [
+        "dark8"
+      ],
+      "rationale": "Idle Mac thumb dark8 solid (scheme may accept 6-digit); optional alpha via yellowDark pattern only if needed",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": true
+    },
+    {
+      "key": "ScrollBar.Mac.hoverThumbColor",
+      "kind": "color",
+      "baseAttributes": null,
+      "explicit": {
+        "value": "525150"
+      },
+      "palette_tokens": [
+        "dark10"
+      ],
+      "rationale": "Hover Mac thumb dark10 (matches ui.ScrollBar.hoverThumbColor token)",
+      "phase": "3.1",
+      "family": "colors",
+      "qa": true
+    },
+    {
+      "key": "DOC_CODE_BLOCK",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "dfdedd",
+        "BACKGROUND": "222120",
+        "EFFECT_COLOR": "424140"
+      },
+      "palette_tokens": [
+        "light8",
+        "dark4",
+        "dark8"
+      ],
+      "rationale": "Quick Doc code block: light text on dark4, border dark8",
+      "phase": "3.2",
+      "family": "Doc",
+      "qa": true
+    },
+    {
+      "key": "DOC_CODE_INLINE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "dfdedd",
+        "BACKGROUND": "373635"
+      },
+      "palette_tokens": [
+        "light8",
+        "dark7"
+      ],
+      "rationale": "Inline code chip light8 on dark7",
+      "phase": "3.2",
+      "family": "Doc",
+      "qa": false
+    },
+    {
+      "key": "DOC_TIPS_SHORTCUT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "dfdedd",
+        "EFFECT_COLOR": "6f6e6d"
+      },
+      "palette_tokens": [
+        "light8",
+        "light1"
+      ],
+      "rationale": "Shortcut tips light8 with light1 outline",
+      "phase": "3.2",
+      "family": "Doc",
+      "qa": false
+    },
+    {
+      "key": "INLAY_DEFAULT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "7f7e7d",
+        "BACKGROUND": "424140"
+      },
+      "palette_tokens": [
+        "light2",
+        "dark8"
+      ],
+      "rationale": "Default inlay = hint gray on dark8",
+      "phase": "3.2",
+      "family": "Inlay",
+      "qa": true
+    },
+    {
+      "key": "INLAY_TEXT_WITHOUT_BACKGROUND",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "7f7e7d"
+      },
+      "palette_tokens": [
+        "light2"
+      ],
+      "rationale": "Bare inlay text light2",
+      "phase": "3.2",
+      "family": "Inlay",
+      "qa": false
+    },
+    {
+      "key": "ANNOTATION_NAME_ATTRIBUTES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_METADATA",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Annotation names \u2192 metadata/accent",
+      "phase": "3.2",
+      "family": "Java",
+      "qa": false
+    },
+    {
+      "key": "GO_KEYWORD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go keyword",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_BUILTIN_CONSTANT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CONSTANT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go builtin const/var \u2192 constant",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_BUILTIN_VARIABLE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CONSTANT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go builtin const/var \u2192 constant",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_BUILTIN_FUNCTION",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PARAMETER"
+      ],
+      "rationale": "Builtin fn names warm parameter (distinct from calls)",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_BUILTIN_FUNCTION_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go calls \u2192 function call",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_EXPORTED_FUNCTION_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go calls \u2192 function call",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_LOCAL_FUNCTION_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go calls \u2192 function call",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_BUILTIN_TYPE_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_TYPE_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_TYPE_SPECIFICATION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_EXPORTED_INTERFACE_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_LOCAL_INTERFACE_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_EXPORTED_STRUCT_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_LOCAL_STRUCT_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_PACKAGE_EXPORTED_INTERFACE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_PACKAGE_LOCAL_INTERFACE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_PACKAGE_EXPORTED_STRUCT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_PACKAGE_LOCAL_STRUCT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_IDENTIFIER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_LABEL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go types/structs/interfaces \u2192 class cyan",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_FUNCTION_PARAMETER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PARAMETER"
+      ],
+      "rationale": "Params/receivers/local members parameter + italic",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_METHOD_RECEIVER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PARAMETER"
+      ],
+      "rationale": "Params/receivers/local members parameter + italic",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_STRUCT_LOCAL_MEMBER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PARAMETER"
+      ],
+      "rationale": "Params/receivers/local members parameter + italic",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_PACKAGE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Package path \u2248 static field violet",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_PACKAGE_EXPORTED_VARIABLE_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Package path \u2248 static field violet",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_PACKAGE_LOCAL_VARIABLE_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Package path \u2248 static field violet",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_STRING",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STRING",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go string",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_NUMBER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_NUMBER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go number",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_BLOCK_COMMENT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LINE_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go comments",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_COMMENT_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LINE_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go comments",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_COMMENT_KEYWORD",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ffb900",
+        "EFFECT_COLOR": "ffb900",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "accent"
+      ],
+      "rationale": "Comment keywords like doc tags",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_VALID_STRING_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go valid escape",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_INVALID_STRING_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INVALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Go invalid escape",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_SHADOWING_VARIABLE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "dfdedd"
+      },
+      "palette_tokens": [
+        "light8"
+      ],
+      "rationale": "Shadowing var slightly bright light8",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_REASSIGNMENT_IN_SHORT_VAR_DECLARATION",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "8e8cb7",
+        "EFFECT_COLOR": "8e8cb7",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_REASSIGNED_LOCAL_VARIABLE"
+      ],
+      "rationale": "Reassignment underline like reassigned local",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_BAD_TOKEN",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_COLOR": "f25022",
+        "EFFECT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_INVALID / constant red"
+      ],
+      "rationale": "Bad token wave error red f25022",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_COMMA",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty punctuation",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_DOT",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty punctuation",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_OPERATOR",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty punctuation",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_SEMICOLON",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty punctuation",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_COLON",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "dfdedd",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "light8"
+      ],
+      "rationale": "Colon light8 (no dark bg \u2014 keep FG only)",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_PACKAGE_EXPORTED_VARIABLE",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty exported member",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "GO_STRUCT_EXPORTED_MEMBER",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty exported member",
+      "phase": "4.1",
+      "family": "Go",
+      "qa": false
+    },
+    {
+      "key": "PY.KEYWORD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_KEYWORD",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.NUMBER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_NUMBER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_NUMBER",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.OPERATION_SIGN",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_OPERATION_SIGN",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_OPERATION_SIGN",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.FUNCTION_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_FUNCTION_CALL",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.METHOD_CALL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_FUNCTION_CALL",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.CLASS_DEFINITION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_CLASS_NAME",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.PREDEFINED_DEFINITION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_CLASS_NAME",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.PREDEFINED_USAGE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_REFERENCE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_CLASS_REFERENCE",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.DOC_COMMENT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_DOC_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_DOC_COMMENT",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.DOC_COMMENT_TAG",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_DOC_COMMENT_TAG",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_DOC_COMMENT_TAG",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.LINE_COMMENT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LINE_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Python \u2192 DEFAULT_LINE_COMMENT",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.BUILTIN_NAME",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PREDEFINED_SYMBOL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Builtins \u2192 predefined",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.FSTRING_FRAGMENT_BRACES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PARAMETER"
+      ],
+      "rationale": "f-string braces warm parameter",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.FSTRING_FRAGMENT_COLON",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PARAMETER"
+      ],
+      "rationale": "f-string format colon parameter",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.STRING.U",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "a9dc76"
+      },
+      "palette_tokens": [
+        "\u2014 PY.STRING"
+      ],
+      "rationale": "Match existing PY.STRING a9dc76 (Hiberbee Python strings are green)",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.BRACES",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty Python punctuation",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.BRACKETS",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty Python punctuation",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.PARENTHS",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty Python punctuation",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.COMMA",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty Python punctuation",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.DOT",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty Python punctuation",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "PY.SELF_PARAMETER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ed005c",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 existing PY.SELF_PARAMETER"
+      ],
+      "rationale": "Keep existing ed005c; add italic FONT_TYPE=2 only",
+      "phase": "4.2",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "RUBY_LOCAL_VAR_ID",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LOCAL_VARIABLE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby/HAML \u2192 DEFAULT_LOCAL_VARIABLE",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_PARAMETER_ID",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARAMETER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby/HAML \u2192 DEFAULT_PARAMETER",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "HAML_COMMENT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_DOC_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby/HAML \u2192 DEFAULT_DOC_COMMENT",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "HAML_RUBY_CODE",
+      "kind": "baseAttributes",
+      "baseAttributes": "INJECTED_LANGUAGE_FRAGMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby/HAML \u2192 INJECTED_LANGUAGE_FRAGMENT",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_COMMENT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LINE_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby comment",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_CONSTANT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby constant \u2248 class",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_CONSTANT_DECLARATION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CONSTANT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby const decl \u2192 constant",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_CVAR",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Class var \u2192 static field",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_GVAR",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_GLOBAL_VARIABLE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Global var",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_IVAR",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INSTANCE_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Instance var \u2192 field",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_METHOD_NAME",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_DECLARATION",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Method name \u2192 function decl",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_NUMBER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_NUMBER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby number",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_SYMBOL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Symbol \u2248 static field violet",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_ESCAPE_SEQUENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby escape",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_INVALID_ESCAPE_SEQUENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INVALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ruby bad escape",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_INTERPOLATED_STRING",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STRING",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Interpolated string",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_HEREDOC_CONTENT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ffd866"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_STRING"
+      ],
+      "rationale": "Heredoc content string yellow (RUBY_HEREDOC_ID already muted)",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_HASH_ASSOC",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "dfdedd"
+      },
+      "palette_tokens": [
+        "light8"
+      ],
+      "rationale": "Hash rocket light8",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_BAD_CHARACTER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_COLOR": "f65f87",
+        "EFFECT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 BAD_CHARACTER family f65f87"
+      ],
+      "rationale": "Bad char wave",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_REGEXP",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "222120"
+      },
+      "palette_tokens": [
+        "dark4"
+      ],
+      "rationale": "Regexp region dark4",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RUBY_LINE_CONTINUATION",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "HAML_ID",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "92d923"
+      },
+      "palette_tokens": [
+        "green"
+      ],
+      "rationale": "HAML id green",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RHTML_COMMENT_ID",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LINE_COMMENT",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "RHTML comment (HTML_COMMENT may not exist; use line comment)",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RHTML_EXPRESSION_END_ID",
+      "kind": "baseAttributes",
+      "baseAttributes": "XML_TAG_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "RHTML_EXPRESSION_END_ID \u2192 XML_TAG_NAME",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RHTML_SCRIPTLET_END_ID",
+      "kind": "baseAttributes",
+      "baseAttributes": "XML_TAG_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "RHTML_SCRIPTLET_END_ID \u2192 XML_TAG_NAME",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "RHTML_SCRIPTLET_START_ID",
+      "kind": "baseAttributes",
+      "baseAttributes": "XML_TAG_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "RHTML_SCRIPTLET_START_ID \u2192 XML_TAG_NAME",
+      "phase": "4.3",
+      "family": "Ruby",
+      "qa": false
+    },
+    {
+      "key": "KOTLIN_ARROW",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty arrow",
+      "phase": "4.4",
+      "family": "Kotlin",
+      "qa": false
+    },
+    {
+      "key": "KOTLIN_ENUM_ENTRY",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Enum entry \u2192 static field",
+      "phase": "4.4",
+      "family": "Kotlin",
+      "qa": false
+    },
+    {
+      "key": "KOTLIN_PACKAGE_PROPERTY",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Package property \u2192 static field",
+      "phase": "4.4",
+      "family": "Kotlin",
+      "qa": false
+    },
+    {
+      "key": "KOTLIN_LABEL",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "57d1eb"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_CLASS_NAME"
+      ],
+      "rationale": "Labels cyan class-like 57d1eb",
+      "phase": "4.4",
+      "family": "Kotlin",
+      "qa": false
+    },
+    {
+      "key": "JSON.KEYWORD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JSON true/false/null \u2192 keyword",
+      "phase": "5.1",
+      "family": "JSON",
+      "qa": false
+    },
+    {
+      "key": "JSON.NUMBER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_NUMBER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JSON number",
+      "phase": "5.1",
+      "family": "JSON",
+      "qa": false
+    },
+    {
+      "key": "JSON.PROPERTY_KEY",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9380ff"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_COMMA / YAML_SCALAR_KEY 9380ff"
+      ],
+      "rationale": "Keys violet 9380ff like YAML_SCALAR_KEY",
+      "phase": "5.1",
+      "family": "JSON",
+      "qa": false
+    },
+    {
+      "key": "JSON.STRING",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STRING",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JSON string",
+      "phase": "5.1",
+      "family": "JSON",
+      "qa": false
+    },
+    {
+      "key": "JSON.VALID_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "JSON escape",
+      "phase": "5.1",
+      "family": "JSON",
+      "qa": false
+    },
+    {
+      "key": "YAML_ANCHOR",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PARAMETER"
+      ],
+      "rationale": "YAML anchors parameter warm",
+      "phase": "5.1",
+      "family": "YAML",
+      "qa": false
+    },
+    {
+      "key": "YAML_TEXT",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STRING",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "YAML text \u2248 string",
+      "phase": "5.1",
+      "family": "YAML",
+      "qa": false
+    },
+    {
+      "key": "org.toml.KEY",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "57d1eb"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_CLASS_NAME"
+      ],
+      "rationale": "TOML keys cyan class",
+      "phase": "5.1",
+      "family": "TOML",
+      "qa": false
+    },
+    {
+      "key": "org.toml.DATE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_PARAMETER"
+      ],
+      "rationale": "TOML dates parameter",
+      "phase": "5.1",
+      "family": "TOML",
+      "qa": false
+    },
+    {
+      "key": "PROPERTIES.INVALID_STRING_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INVALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Properties invalid escape",
+      "phase": "5.1",
+      "family": "Properties",
+      "qa": false
+    },
+    {
+      "key": "PROPERTIES.VALID_STRING_ESCAPE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Properties valid escape",
+      "phase": "5.1",
+      "family": "Properties",
+      "qa": false
+    },
+    {
+      "key": "CONSOLE_SELECTED_PARAMETER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9896ff",
+        "BACKGROUND": "222120"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_STATIC_FIELD",
+        "dark4"
+      ],
+      "rationale": "Selected console param",
+      "phase": "5.2",
+      "family": "Console",
+      "qa": false
+    },
+    {
+      "key": "LOGCAT_ASSERT_OUTPUT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9380ff"
+      },
+      "palette_tokens": [
+        "\u2014 LOGCAT_V2_LEVEL_ASSERT"
+      ],
+      "rationale": "Mirror LOGCAT_V2_LEVEL_ASSERT",
+      "phase": "5.2",
+      "family": "Logcat",
+      "qa": false
+    },
+    {
+      "key": "LOGCAT_DEBUG_OUTPUT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "57d1eb"
+      },
+      "palette_tokens": [
+        "\u2014 LOGCAT_V2_LEVEL_DEBUG"
+      ],
+      "rationale": "Mirror LOGCAT_V2_LEVEL_DEBUG",
+      "phase": "5.2",
+      "family": "Logcat",
+      "qa": false
+    },
+    {
+      "key": "LOGCAT_ERROR_OUTPUT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f25022"
+      },
+      "palette_tokens": [
+        "\u2014 LOGCAT_V2_LEVEL_ERROR"
+      ],
+      "rationale": "Mirror LOGCAT_V2_LEVEL_ERROR",
+      "phase": "5.2",
+      "family": "Logcat",
+      "qa": false
+    },
+    {
+      "key": "LOGCAT_INFO_OUTPUT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "92d923"
+      },
+      "palette_tokens": [
+        "\u2014 LOGCAT_V2_LEVEL_INFO"
+      ],
+      "rationale": "Mirror LOGCAT_V2_LEVEL_INFO",
+      "phase": "5.2",
+      "family": "Logcat",
+      "qa": false
+    },
+    {
+      "key": "LOGCAT_VERBOSE_OUTPUT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "acacac"
+      },
+      "palette_tokens": [
+        "\u2014 LOGCAT_V2_LEVEL_VERBOSE"
+      ],
+      "rationale": "Mirror LOGCAT_V2_LEVEL_VERBOSE",
+      "phase": "5.2",
+      "family": "Logcat",
+      "qa": false
+    },
+    {
+      "key": "LOGCAT_WARNING_OUTPUT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ffb900"
+      },
+      "palette_tokens": [
+        "\u2014 LOGCAT_V2_LEVEL_WARNING"
+      ],
+      "rationale": "Mirror LOGCAT_V2_LEVEL_WARNING",
+      "phase": "5.2",
+      "family": "Logcat",
+      "qa": false
+    },
+    {
+      "key": "JAVA_KEYWORD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Java keyword",
+      "phase": "6.1",
+      "family": "Java",
+      "qa": false
+    },
+    {
+      "key": "CONSTRUCTOR_CALL_ATTRIBUTES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ctor call \u2248 class",
+      "phase": "6.1",
+      "family": "Java",
+      "qa": false
+    },
+    {
+      "key": "CONSTRUCTOR_DECLARATION_ATTRIBUTES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Ctor decl \u2248 class",
+      "phase": "6.1",
+      "family": "Java",
+      "qa": false
+    },
+    {
+      "key": "INTERFACE_NAME_ATTRIBUTES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INTERFACE_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Interface name",
+      "phase": "6.1",
+      "family": "Java",
+      "qa": false
+    },
+    {
+      "key": "STATIC_METHOD_ATTRIBUTES",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_METHOD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Static method",
+      "phase": "6.1",
+      "family": "Java",
+      "qa": false
+    },
+    {
+      "key": "Abstract class name",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Abstract class",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Interface name",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_INTERFACE_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Interface",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Method call",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Method call",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Annotation",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_METADATA",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Annotation",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Anotation attribute name",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARAMETER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Annotation attr (sic spelling)",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Number",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_NUMBER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Number",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "String",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STRING",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "String",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Valid string escape",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_VALID_STRING_ESCAPE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Escape",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Method declaration",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_DECLARATION",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Method decl if present as space name",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Standart Java Collection",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [],
+      "rationale": "Collection type dotted underline only",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Class",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Class space-name \u2192 class (or CLASS_NAME_ATTRIBUTES if exists)",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Closure braces",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_BRACES",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Closure braces \u2192 braces",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Label",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LABEL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Label",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "List/map to object conversion",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "TAG_ATTR_KEY",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_ATTRIBUTE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Tag attr key",
+      "phase": "6.1",
+      "family": "Space-named",
+      "qa": false
+    },
+    {
+      "key": "Static method access",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9896ff",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_STATIC_FIELD"
+      ],
+      "rationale": "Python static method access",
+      "phase": "6.5",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "Static property reference ID",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9896ff",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_STATIC_FIELD"
+      ],
+      "rationale": "Python static property",
+      "phase": "6.5",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "Unresolved reference access",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "6f6e6d",
+        "EFFECT_COLOR": "7f7e7d",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "light1",
+        "light2"
+      ],
+      "rationale": "Unresolved muted + dotted",
+      "phase": "6.5",
+      "family": "Python",
+      "qa": false
+    },
+    {
+      "key": "Scala Abstract class",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Scala abstract class",
+      "phase": "6.2",
+      "family": "Scala",
+      "qa": false
+    },
+    {
+      "key": "Scala Predefined types",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Scala predefined types",
+      "phase": "6.2",
+      "family": "Scala",
+      "qa": false
+    },
+    {
+      "key": "Scala Type Alias",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Type alias violet",
+      "phase": "6.2",
+      "family": "Scala",
+      "qa": false
+    },
+    {
+      "key": "Scala Type parameter",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_STATIC_FIELD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Type param violet",
+      "phase": "6.2",
+      "family": "Scala",
+      "qa": false
+    },
+    {
+      "key": "ScalaDoc @param value",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_DOC_COMMENT_TAG_VALUE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "ScalaDoc param value",
+      "phase": "6.2",
+      "family": "Scala",
+      "qa": false
+    },
+    {
+      "key": "Groovy constructor call",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Groovy ctor",
+      "phase": "6.2",
+      "family": "Groovy",
+      "qa": false
+    },
+    {
+      "key": "Groovy method declaration",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_DECLARATION",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Groovy method",
+      "phase": "6.2",
+      "family": "Groovy",
+      "qa": false
+    },
+    {
+      "key": "Groovy parameter",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARAMETER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Groovy param",
+      "phase": "6.2",
+      "family": "Groovy",
+      "qa": false
+    },
+    {
+      "key": "Groovy reassigned parameter",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_REASSIGNED_PARAMETER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Groovy reassigned param",
+      "phase": "6.2",
+      "family": "Groovy",
+      "qa": false
+    },
+    {
+      "key": "SWIFT_ATTRIBUTE_NAME",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_METADATA",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Swift attribute",
+      "phase": "6.2",
+      "family": "Swift",
+      "qa": false
+    },
+    {
+      "key": "SWIFT_MODULE_NAME",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Swift module",
+      "phase": "6.2",
+      "family": "Swift",
+      "qa": false
+    },
+    {
+      "key": "OC.DIRECTIVE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_METADATA",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "ObjC directive \u2248 metadata",
+      "phase": "6.3",
+      "family": "ObjC",
+      "qa": false
+    },
+    {
+      "key": "OC.METHOD_DECLARATION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_DECLARATION",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "ObjC method",
+      "phase": "6.3",
+      "family": "ObjC",
+      "qa": false
+    },
+    {
+      "key": "OC.CONDITIONALLY_NOT_COMPILED",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "6f6e6d"
+      },
+      "palette_tokens": [
+        "light1"
+      ],
+      "rationale": "Conditionally off code muted light1",
+      "phase": "6.3",
+      "family": "ObjC",
+      "qa": false
+    },
+    {
+      "key": "VELOCITY_DIRECTIVE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Velocity directive",
+      "phase": "6.4",
+      "family": "Velocity",
+      "qa": false
+    },
+    {
+      "key": "VELOCITY_KEYWORD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Velocity keyword",
+      "phase": "6.4",
+      "family": "Velocity",
+      "qa": false
+    },
+    {
+      "key": "VELOCITY_REFERENCE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Velocity ref \u2248 call",
+      "phase": "6.4",
+      "family": "Velocity",
+      "qa": false
+    },
+    {
+      "key": "VELOCITY_SCRIPTING_BACKGROUND",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "dfdedd",
+        "BACKGROUND": "222120"
+      },
+      "palette_tokens": [
+        "light8",
+        "dark4"
+      ],
+      "rationale": "Velocity scripting island",
+      "phase": "6.4",
+      "family": "Velocity",
+      "qa": false
+    },
+    {
+      "key": "XPATH.FUNCTION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_FUNCTION_CALL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "XPath function",
+      "phase": "6.4",
+      "family": "XPath",
+      "qa": false
+    },
+    {
+      "key": "XPATH.KEYWORD",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "XPath keyword",
+      "phase": "6.4",
+      "family": "XPath",
+      "qa": false
+    },
+    {
+      "key": "XPATH.XPATH_VARIABLE",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LOCAL_VARIABLE",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "XPath variable",
+      "phase": "6.4",
+      "family": "XPath",
+      "qa": false
+    },
+    {
+      "key": "PROTO_IDENTIFIER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Protobuf id",
+      "phase": "6.4",
+      "family": "Proto",
+      "qa": false
+    },
+    {
+      "key": "PROTOTEXT_IDENTIFIER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Prototext id",
+      "phase": "6.4",
+      "family": "Proto",
+      "qa": false
+    },
+    {
+      "key": "QL_ATTRIBUTE",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty CodeQL attribute",
+      "phase": "6.4",
+      "family": "CodeQL",
+      "qa": false
+    },
+    {
+      "key": "QL_FUNCTION",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_CLASS_NAME",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "CodeQL function",
+      "phase": "6.4",
+      "family": "CodeQL",
+      "qa": false
+    },
+    {
+      "key": "QL_PARAMETER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "dfdedd"
+      },
+      "palette_tokens": [
+        "light8"
+      ],
+      "rationale": "CodeQL param light8",
+      "phase": "6.4",
+      "family": "CodeQL",
+      "qa": false
+    },
+    {
+      "key": "HTTP_REQUEST_MESSAGE_BODY",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARAMETER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "HTTP body warm parameter",
+      "phase": "6.4",
+      "family": "HTTP",
+      "qa": false
+    },
+    {
+      "key": "JUPYTER_CELL_MARKER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_KEYWORD",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Jupyter cell marker keyword-colored",
+      "phase": "6.4",
+      "family": "Jupyter",
+      "qa": false
+    },
+    {
+      "key": "GRID_ERROR_VALUE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_COLOR": "f65f87",
+        "ERROR_STRIPE_COLOR": "f25022",
+        "EFFECT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 error family"
+      ],
+      "rationale": "Grid error wave",
+      "phase": "6.4",
+      "family": "Grid",
+      "qa": false
+    },
+    {
+      "key": "MAKO.SUBSTITUTION",
+      "kind": "pin_empty",
+      "baseAttributes": null,
+      "explicit": {},
+      "palette_tokens": [],
+      "rationale": "Pin empty",
+      "phase": "6.4",
+      "family": "Mako",
+      "qa": false
+    },
+    {
+      "key": "SPY-JS.EXCEPTION",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_TYPE": "2"
+      },
+      "palette_tokens": [],
+      "rationale": "Spy-js exception underline",
+      "phase": "6.4",
+      "family": "SpyJS",
+      "qa": false
+    },
+    {
+      "key": "SPY-JS.FUNCTION_SCOPE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_TYPE": "2"
+      },
+      "palette_tokens": [],
+      "rationale": "Spy-js scope underline",
+      "phase": "6.4",
+      "family": "SpyJS",
+      "qa": false
+    },
+    {
+      "key": "com.plan9.IDENTIFIER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_IDENTIFIER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Plan9 id",
+      "phase": "6.4",
+      "family": "Plan9",
+      "qa": false
+    },
+    {
+      "key": "com.plan9.LABEL",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_LABEL",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Plan9 label",
+      "phase": "6.4",
+      "family": "Plan9",
+      "qa": false
+    },
+    {
+      "key": "com.plan9.REGISTER",
+      "kind": "baseAttributes",
+      "baseAttributes": "DEFAULT_PARAMETER",
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Plan9 register",
+      "phase": "6.4",
+      "family": "Plan9",
+      "qa": false
+    },
+    {
+      "key": "IDENTIFIER_UNDER_CARET_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "203020",
+        "ERROR_STRIPE_COLOR": "92d923",
+        "EFFECT_TYPE": "1",
+        "EFFECT_COLOR": "78dce8"
+      },
+      "palette_tokens": [
+        "greenBg",
+        "green",
+        "\u2014 keep existing EFFECT_COLOR 78dce8"
+      ],
+      "rationale": "Read occurrences: greenBg + green stripe; keep cyan effect",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "403018",
+        "ERROR_STRIPE_COLOR": "ee9b70",
+        "EFFECT_TYPE": "1",
+        "EFFECT_COLOR": "afaead"
+      },
+      "palette_tokens": [
+        "orangeBg",
+        "\u2014 DEFAULT_PARAMETER-ish"
+      ],
+      "rationale": "Write occurrences: orangeBg tint",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "SEARCH_RESULT_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "203020",
+        "ERROR_STRIPE_COLOR": "92d923",
+        "FOREGROUND": "ffffff",
+        "FONT_TYPE": "1",
+        "EFFECT_COLOR": "525150"
+      },
+      "palette_tokens": [
+        "greenBg",
+        "green"
+      ],
+      "rationale": "Search hits greenBg family",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "TEXT_SEARCH_RESULT_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "253047",
+        "ERROR_STRIPE_COLOR": "409cff",
+        "EFFECT_COLOR": "424140"
+      },
+      "palette_tokens": [
+        "blueBg",
+        "blue"
+      ],
+      "rationale": "Text search blueBg",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "WRITE_SEARCH_RESULT_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "302030",
+        "ERROR_STRIPE_COLOR": "f65f87"
+      },
+      "palette_tokens": [
+        "violetBg"
+      ],
+      "rationale": "Write search violetBg",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "FOLDED_TEXT_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "7f7e7d",
+        "BACKGROUND": "424140"
+      },
+      "palette_tokens": [
+        "light2",
+        "dark8"
+      ],
+      "rationale": "Folded region dark8 bg",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "INLINE_PARAMETER_HINT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "969696",
+        "BACKGROUND": "424140"
+      },
+      "palette_tokens": [
+        "dark8"
+      ],
+      "rationale": "Param hint chip dark8",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "INLINE_PARAMETER_HINT_CURRENT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "fff1c9",
+        "BACKGROUND": "253047"
+      },
+      "palette_tokens": [
+        "blueBg"
+      ],
+      "rationale": "Current param blueBg",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "INLINE_PARAMETER_HINT_HIGHLIGHTED",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "fcfcfa",
+        "BACKGROUND": "525150"
+      },
+      "palette_tokens": [
+        "dark10"
+      ],
+      "rationale": "Highlighted param dark10",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "INJECTED_LANGUAGE_FRAGMENT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "253047",
+        "EFFECT_COLOR": "525150"
+      },
+      "palette_tokens": [
+        "blueBg"
+      ],
+      "rationale": "Injection host blueBg wash",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "DEFAULT_TEMPLATE_LANGUAGE_COLOR",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "272625",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "dark5"
+      ],
+      "rationale": "Template language region dark5",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_REASSIGNED_LOCAL_VARIABLE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "8e8cb7",
+        "EFFECT_COLOR": "8f8e8d",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "light3"
+      ],
+      "rationale": "Reassigned local underline light3",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_REASSIGNED_PARAMETER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "edc777",
+        "FONT_TYPE": "2",
+        "EFFECT_COLOR": "8f8e8d",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "light3",
+        "\u2014 keep existing FG edc777"
+      ],
+      "rationale": "Keep FG; add underline",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "TEXT_STYLE_ERROR",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_COLOR": "f25022",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "\u2014 f25022 error"
+      ],
+      "rationale": "Error style dotted red",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "TEXT_STYLE_WARNING",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_COLOR": "ffb900",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "accent"
+      ],
+      "rationale": "Warning style dotted accent",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "CONSOLE_RANGE_TO_EXECUTE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_COLOR": "92d923"
+      },
+      "palette_tokens": [
+        "green"
+      ],
+      "rationale": "Range-to-execute green outline",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "KOTLIN_SMART_CAST_RECEIVER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "b7e66e",
+        "BACKGROUND": "203020"
+      },
+      "palette_tokens": [
+        "greenBg"
+      ],
+      "rationale": "Smart-cast receiver greenBg",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "KOTLIN_SMART_CAST_VALUE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "c9bfff",
+        "BACKGROUND": "302030"
+      },
+      "palette_tokens": [
+        "violetBg"
+      ],
+      "rationale": "Smart-cast value violetBg",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "KOTLIN_SMART_CONSTANT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ed005c",
+        "BACKGROUND": "320f0f"
+      },
+      "palette_tokens": [
+        "redBg"
+      ],
+      "rationale": "Smart-cast const redBg light",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "KOTLIN_MUTABLE_VARIABLE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "EFFECT_COLOR": "8f8e8d",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "light3"
+      ],
+      "rationale": "Mutable var underline light3",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "NOT_TOP_FRAME_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f7cd46",
+        "BACKGROUND": "253047"
+      },
+      "palette_tokens": [
+        "blueBg",
+        "\u2014 keep existing FG"
+      ],
+      "rationale": "Non-top frame blueBg",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "TODO_DEFAULT_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ffbdce",
+        "FONT_TYPE": "2",
+        "ERROR_STRIPE_COLOR": "92d923"
+      },
+      "palette_tokens": [
+        "green"
+      ],
+      "rationale": "TODO italic + green stripe",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "BOOKMARKS_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "bfbebd",
+        "BACKGROUND": "222120",
+        "ERROR_STRIPE_COLOR": "f5d277"
+      },
+      "palette_tokens": [
+        "yellowLight",
+        "dark4"
+      ],
+      "rationale": "Bookmark stripe yellowLight",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "BREAKPOINT_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "320a19",
+        "ERROR_STRIPE_COLOR": "f65f87"
+      },
+      "palette_tokens": [
+        "redBg family"
+      ],
+      "rationale": "Breakpoint stripe pink-red",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DELETED_TEXT_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "afaead",
+        "BACKGROUND": "261b1a",
+        "EFFECT_COLOR": "525150",
+        "EFFECT_TYPE": "3"
+      },
+      "palette_tokens": [
+        "\u2014 DIFF_DELETED"
+      ],
+      "rationale": "Deleted text use diff deleted bg",
+      "phase": "7.1",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "BAD_CHARACTER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f65f87",
+        "EFFECT_COLOR": "f65f87",
+        "EFFECT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 existing effect"
+      ],
+      "rationale": "Add FG matching wave",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "UNMATCHED_BRACE_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f65f87",
+        "FONT_TYPE": "1",
+        "EFFECT_COLOR": "ed005c"
+      },
+      "palette_tokens": [
+        "\u2014 keep effect"
+      ],
+      "rationale": "Add FG pink-red",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "WRONG_REFERENCES_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f65f87",
+        "EFFECT_COLOR": "e81123",
+        "ERROR_STRIPE_COLOR": "ed005c",
+        "EFFECT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep effects"
+      ],
+      "rationale": "Add FG",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "CTRL_CLICKABLE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "409cff",
+        "EFFECT_COLOR": "409cff",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "blue"
+      ],
+      "rationale": "Hyperlink blue underline",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_INVALID_STRING_ESCAPE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70",
+        "EFFECT_COLOR": "f25022",
+        "EFFECT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep effect f25022"
+      ],
+      "rationale": "Add FG parameter warm",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "MATCHED_BRACE_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ffb900",
+        "BACKGROUND": "3b514d",
+        "FONT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "accent",
+        "\u2014 keep bg 3b514d"
+      ],
+      "rationale": "Matched brace accent FG",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "INACTIVE_HYPERLINK_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9896ff",
+        "EFFECT_COLOR": "8f8e8d",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 DEFAULT_STATIC_FIELD"
+      ],
+      "rationale": "Inactive link violet",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "CODE_LENS_BORDER_COLOR",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "BACKGROUND": "525150",
+        "EFFECT_COLOR": "525150"
+      },
+      "palette_tokens": [
+        "dark10"
+      ],
+      "rationale": "Set both BG and EFFECT_COLOR to dark10 for platform variance",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": true
+    },
+    {
+      "key": "ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "b7c3",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 keep FG"
+      ],
+      "rationale": "Add underline EFFECT_TYPE",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "PROPERTIES.KEY",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9380ff",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 keep FG"
+      ],
+      "rationale": "Add underline on keys",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "YAML_SCALAR_LIST",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ccbfaf",
+        "BACKGROUND": "171615",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "dark3"
+      ],
+      "rationale": "Block scalar dark3 wash",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "YAML_SCALAR_VALUE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ccbfaf",
+        "BACKGROUND": "171615",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "dark3"
+      ],
+      "rationale": "Scalar value dark3 wash",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "HAML_TAG",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ff6188",
+        "BACKGROUND": "171615",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "dark3",
+        "\u2014 keep tag pink"
+      ],
+      "rationale": "HAML tag dark3",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "STATIC_FINAL_FIELD_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ff8c00",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 keep ff8c00"
+      ],
+      "rationale": "Final static underline",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "CONSOLE_USER_INPUT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "b4da82",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep FG"
+      ],
+      "rationale": "User input italic",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "CSS.IMPORTANT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f25022",
+        "FONT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 keep f25022"
+      ],
+      "rationale": "!important bold",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_CONSTANT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f25022",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Constants italic optional",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_DOC_COMMENT",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ccbfaf",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Doc comments italic optional",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_STATIC_FIELD",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9896ff",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Static fields italic optional",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_STATIC_METHOD",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "b7e66e",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Static methods italic optional",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_PARAMETER",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Params italic optional",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_METADATA",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ffb900",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Metadata italic optional",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_GLOBAL_VARIABLE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ff8c00",
+        "FONT_TYPE": "1",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Global bold optional",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEFAULT_DOC_COMMENT_TAG_VALUE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ee9b70",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep ee9b70"
+      ],
+      "rationale": "Doc tag value italic",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "DEBUGGER_INLINED_VALUES_EXECUTION_LINE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ff638a",
+        "FONT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Debugger inline italic",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "LINE_FULL_COVERAGE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9adf66",
+        "FONT_TYPE": "1",
+        "EFFECT_TYPE": "2"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Coverage bold",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "LINE_NONE_COVERAGE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "f9d878",
+        "FONT_TYPE": "1",
+        "EFFECT_TYPE": "3"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Coverage bold",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "LINE_PARTIAL_COVERAGE",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ef9c70",
+        "FONT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Coverage bold",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "REGEXP.CHAR_CLASS",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "ed005c",
+        "FONT_TYPE": "1",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [
+        "\u2014 keep"
+      ],
+      "rationale": "Char class bold",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "9380ff",
+        "EFFECT_COLOR": "8f8e8d",
+        "EFFECT_TYPE": "1"
+      },
+      "palette_tokens": [
+        "light3"
+      ],
+      "rationale": "Underline implicit param",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "Scala Immutable Collection",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "b7c3",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [],
+      "rationale": "Dotted underline",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "Scala Mutable Collection",
+      "kind": "explicit",
+      "baseAttributes": null,
+      "explicit": {
+        "FOREGROUND": "78dce8",
+        "EFFECT_TYPE": "5"
+      },
+      "palette_tokens": [],
+      "rationale": "Dotted underline",
+      "phase": "7.2",
+      "family": "Partial",
+      "qa": false
+    },
+    {
+      "key": "ScrollBar.thumbColor",
+      "kind": "theme_json",
+      "baseAttributes": null,
+      "explicit": {
+        "ui.ScrollBar.thumbColor": "dark8"
+      },
+      "palette_tokens": [
+        "dark8"
+      ],
+      "rationale": "UI thumb dark8 to pair with hoverThumbColor dark10",
+      "phase": "8.1",
+      "family": "theme_json",
+      "qa": true
+    },
+    {
+      "key": "ScrollBar_Mac_ALIGN",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Align Mac scheme thumbs with theme_json ScrollBar tokens (dark8/dark10)",
+      "phase": "8.1",
+      "family": "theme_json",
+      "qa": false
+    },
+    {
+      "key": "samples/php/Showcase.php",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Sample file authoring \u2014 no color",
+      "phase": "8.2",
+      "family": "samples",
+      "qa": false
+    },
+    {
+      "key": "samples/html/Showcase.html",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Sample file authoring \u2014 no color",
+      "phase": "8.2",
+      "family": "samples",
+      "qa": false
+    },
+    {
+      "key": "samples/typescript/Showcase.ts",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Sample file authoring \u2014 no color",
+      "phase": "8.2",
+      "family": "samples",
+      "qa": false
+    },
+    {
+      "key": "samples/rust/Showcase.rs",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Sample file authoring \u2014 no color",
+      "phase": "8.2",
+      "family": "samples",
+      "qa": false
+    },
+    {
+      "key": "samples/csharp/Showcase.cs",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Sample file authoring \u2014 no color",
+      "phase": "8.2",
+      "family": "samples",
+      "qa": false
+    },
+    {
+      "key": "samples/optional_go_python_ruby",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Sample file authoring \u2014 no color",
+      "phase": "8.2",
+      "family": "samples",
+      "qa": false
+    },
+    {
+      "key": "screenshot_docs",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Document capture steps",
+      "phase": "8.3",
+      "family": "screenshots",
+      "qa": false
+    },
+    {
+      "key": "screenshot_produce",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Produce 5 language screenshots",
+      "phase": "8.3",
+      "family": "screenshots",
+      "qa": false
+    },
+    {
+      "key": "verify_scheme_loads",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Verification step \u2014 not a scheme key",
+      "phase": "verify",
+      "family": "verify",
+      "qa": false
+    },
+    {
+      "key": "verify_defaults_panel",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Verification step \u2014 not a scheme key",
+      "phase": "verify",
+      "family": "verify",
+      "qa": false
+    },
+    {
+      "key": "verify_showcases",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Verification step \u2014 not a scheme key",
+      "phase": "verify",
+      "family": "verify",
+      "qa": false
+    },
+    {
+      "key": "verify_vcs",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Verification step \u2014 not a scheme key",
+      "phase": "verify",
+      "family": "verify",
+      "qa": false
+    },
+    {
+      "key": "verify_search_caret",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Verification step \u2014 not a scheme key",
+      "phase": "verify",
+      "family": "verify",
+      "qa": false
+    },
+    {
+      "key": "verify_next_edit",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Verification step \u2014 not a scheme key",
+      "phase": "verify",
+      "family": "verify",
+      "qa": false
+    },
+    {
+      "key": "verify_scrollbar",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Verification step \u2014 not a scheme key",
+      "phase": "verify",
+      "family": "verify",
+      "qa": false
+    },
+    {
+      "key": "verify_quickdoc",
+      "kind": "process",
+      "baseAttributes": null,
+      "explicit": null,
+      "palette_tokens": [],
+      "rationale": "Verification step \u2014 not a scheme key",
+      "phase": "verify",
+      "family": "verify",
+      "qa": false
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+key,kind,baseAttributes,explicit_json,palette_tokens,phase,family,qa,rationale
+DEFAULT_BLOCK_COMMENT,explicit,,"{""FOREGROUND"": ""acacac""}",— scheme DEFAULT_LINE_COMMENT,0,DEFAULT,False,Match DEFAULT_LINE_COMMENT acacac so block/line comments share Hiberbee muted gray
+DEFAULT_HIGHLIGHTED_REFERENCE,explicit,,"{""EFFECT_COLOR"": ""8f8e8d"", ""EFFECT_TYPE"": ""1""}",light3,0,DEFAULT,True,Soft underline with light3 (muted chrome); avoids competing with caret/selection accent
+DEFAULT_SEMICOLON,pin_empty,,{},,0,DEFAULT,False,Pin empty so punctuation inherits platform; optional later FG=light6 if desired
+DEFAULT_LOCAL_VARIABLE,pin_empty,,{},,0,DEFAULT,False,Pin empty; enables language baseAttributes→DEFAULT_LOCAL_VARIABLE without forcing a color (identifier default)
+org.rust.ASSOC_FUNCTION,baseAttributes,DEFAULT_STATIC_METHOD,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_STATIC_METHOD
+org.rust.ASSOC_FUNCTION_CALL,baseAttributes,DEFAULT_STATIC_METHOD,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_STATIC_METHOD
+org.rust.ATTRIBUTE,baseAttributes,DEFAULT_METADATA,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_METADATA
+org.rust.BLOCK_COMMENT,baseAttributes,DEFAULT_BLOCK_COMMENT,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_BLOCK_COMMENT
+org.rust.BRACES,baseAttributes,DEFAULT_BRACES,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_BRACES
+org.rust.BRACKETS,baseAttributes,DEFAULT_BRACKETS,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_BRACKETS
+org.rust.CHAR,baseAttributes,DEFAULT_STRING,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_STRING
+org.rust.COMMA,baseAttributes,DEFAULT_COMMA,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_COMMA
+org.rust.CONSTANT,baseAttributes,DEFAULT_CONSTANT,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_CONSTANT
+org.rust.CONST_PARAMETER,baseAttributes,DEFAULT_CONSTANT,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_CONSTANT
+org.rust.DOC_CODE,baseAttributes,DEFAULT_DOC_MARKUP,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_DOC_MARKUP
+org.rust.DOC_COMMENT,baseAttributes,DEFAULT_DOC_COMMENT,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_DOC_COMMENT
+org.rust.DOC_HEADING,baseAttributes,DEFAULT_DOC_COMMENT_TAG,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_DOC_COMMENT_TAG
+org.rust.DOC_LINK,baseAttributes,DEFAULT_DOC_COMMENT_TAG_VALUE,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_DOC_COMMENT_TAG_VALUE
+org.rust.DOT,baseAttributes,DEFAULT_DOT,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_DOT
+org.rust.ENUM,baseAttributes,DEFAULT_CLASS_NAME,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_CLASS_NAME
+org.rust.ENUM_VARIANT,baseAttributes,DEFAULT_STATIC_FIELD,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_STATIC_FIELD
+org.rust.EOL_COMMENT,baseAttributes,DEFAULT_LINE_COMMENT,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_LINE_COMMENT
+org.rust.FIELD,baseAttributes,DEFAULT_INSTANCE_FIELD,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_INSTANCE_FIELD
+org.rust.FORMAT_PARAMETER,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_VALID_STRING_ESCAPE
+org.rust.FUNCTION,baseAttributes,DEFAULT_FUNCTION_DECLARATION,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_FUNCTION_DECLARATION
+org.rust.FUNCTION_CALL,baseAttributes,DEFAULT_FUNCTION_CALL,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_FUNCTION_CALL
+org.rust.INVALID_STRING_ESCAPE,baseAttributes,DEFAULT_INVALID_STRING_ESCAPE,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_INVALID_STRING_ESCAPE
+org.rust.KEYWORD,baseAttributes,DEFAULT_KEYWORD,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_KEYWORD
+org.rust.METHOD,baseAttributes,DEFAULT_INSTANCE_METHOD,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_INSTANCE_METHOD
+org.rust.METHOD_CALL,baseAttributes,DEFAULT_FUNCTION_CALL,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_FUNCTION_CALL
+org.rust.MUT_BINDING,baseAttributes,DEFAULT_IDENTIFIER,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_IDENTIFIER
+org.rust.MUT_PARAMETER,baseAttributes,DEFAULT_PARAMETER,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_PARAMETER
+org.rust.MUT_STATIC,baseAttributes,DEFAULT_IDENTIFIER,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_IDENTIFIER
+org.rust.NUMBER,baseAttributes,DEFAULT_NUMBER,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_NUMBER
+org.rust.OPERATORS,baseAttributes,DEFAULT_OPERATION_SIGN,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_OPERATION_SIGN
+org.rust.PARAMETER,baseAttributes,DEFAULT_PARAMETER,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_PARAMETER
+org.rust.PARENTHESES,baseAttributes,DEFAULT_PARENTHS,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_PARENTHS
+org.rust.Q_OPERATOR,baseAttributes,DEFAULT_KEYWORD,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_KEYWORD
+org.rust.SEMICOLON,baseAttributes,DEFAULT_SEMICOLON,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_SEMICOLON
+org.rust.STATIC,baseAttributes,DEFAULT_IDENTIFIER,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_IDENTIFIER
+org.rust.STRING,baseAttributes,DEFAULT_STRING,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_STRING
+org.rust.TRAIT,baseAttributes,DEFAULT_INTERFACE_NAME,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_INTERFACE_NAME
+org.rust.TYPE_ALIAS,baseAttributes,DEFAULT_CLASS_NAME,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_CLASS_NAME
+org.rust.UNION,baseAttributes,DEFAULT_CLASS_NAME,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_CLASS_NAME
+org.rust.VALID_STRING_ESCAPE,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_VALID_STRING_ESCAPE
+org.rust.VARIABLE,baseAttributes,DEFAULT_IDENTIFIER,{},,1.1,Rust,False,Rust plugin synonym → DEFAULT_IDENTIFIER
+org.rust.CFG_DISABLED_CODE,explicit,,"{""FOREGROUND"": ""6f6e6d""}",light1,1.1,Rust,False,Muted disabled/cfg-out code ≈ line-number gray light1
+org.rust.FORMAT_SPECIFIER,explicit,,"{""FOREGROUND"": ""ffb900""}",accent/yellow,1.1,Rust,False,Format specs are metadata-like; use DEFAULT_METADATA/accent ffb900
+org.rust.GENERATED_ITEM,explicit,,"{""FOREGROUND"": ""7f7e7d""}",light2,1.1,Rust,False,Generated/muted code ≈ light2 (folded text family)
+org.rust.KEYWORD_UNSAFE,explicit,,"{""FONT_TYPE"": ""1"", ""FOREGROUND"": ""ee7762""}",— DEFAULT_KEYWORD,1.1,Rust,True,Unsafe keyword = keyword color + bold
+org.rust.LIFETIME,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""9896ff""}",— DEFAULT_STATIC_FIELD,1.1,Rust,True,Lifetimes are type-ish violet (static_field 9896ff) + italic
+org.rust.MACRO,explicit,,"{""FONT_TYPE"": ""1"", ""FOREGROUND"": ""92d923""}",green,1.1,Rust,True,Macros ≈ function call green + bold (Hiberbee call = 92d923)
+org.rust.SELF_PARAMETER,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ff638a""}",— DEFAULT_PREDEFINED_SYMBOL / PY.SELF_PARAMETER,1.1,Rust,False,self ≈ predefined/self pink-red (ed005c/ff638a family); use predefined ff638a + italic like PY.SELF
+org.rust.UNSAFE_CODE,explicit,,"{""BACKGROUND"": ""302030""}",violetBg,1.1,Rust,True,Unsafe region tint violetBg (302030); softer than redBg so not error-like
+HTML_TAG,explicit,,"{""FOREGROUND"": ""ff6188""}",— DEFAULT_TAG / CSS.TAG_NAME,1.2,HTML,False,HTML tags use tag pink ff6188 (CSS.TAG_NAME / DEFAULT_TAG)
+HTML_ATTRIBUTE_NAME,explicit,,"{""FOREGROUND"": ""a9dc76""}",— CSS.ATTRIBUTE-ish green a9dc76,1.2,HTML,False,Attr names green a9dc76 (align CSS.CLASS_NAME / CUSTOM_KEYWORD2)
+HTML_ATTRIBUTE_VALUE,baseAttributes,DEFAULT_STRING,{},,1.2,HTML,False,Attribute values are strings
+HTML_ENTITY_REFERENCE,baseAttributes,DEFAULT_ENTITY,{},,1.2,HTML,False,HTML entities → DEFAULT_ENTITY
+HTML_CUSTOM_TAG_NAME,explicit,,"{""FOREGROUND"": ""409cff""}",blue,1.2,HTML,True,Custom elements ≈ interface blue 409cff (distinct from native tags)
+MATCHED_TAG_NAME,explicit,,"{""BACKGROUND"": ""424140""}",dark8,1.2,HTML,True,Matching tag pair subtle fill dark8 (424140)
+XML_TAG,explicit,,"{""FOREGROUND"": ""a9dc76""}",— XML_TAG_NAME,1.3,XML,False,Match existing XML_TAG_NAME a9dc76
+XML_ATTRIBUTE_NAME,explicit,,"{""FOREGROUND"": ""bfbebd""}",light6,1.3,XML,False,XML attrs secondary light6 (bfbebd); less loud than HTML attrs
+XML_ENTITY_REFERENCE,baseAttributes,DEFAULT_ENTITY,{},,1.3,XML,False,XML entities → DEFAULT_ENTITY
+XML_NS_PREFIX,explicit,,"{""FOREGROUND"": ""57d1eb""}",— DEFAULT_CLASS_NAME,1.3,XML,False,Namespace prefix cyan class-like 57d1eb
+XML_CUSTOM_TAG_NAME,explicit,,"{""FOREGROUND"": ""409cff""}",blue,1.3,XML,False,Custom XML tags ≈ interface blue
+PHP_CONSTANT,baseAttributes,DEFAULT_CONSTANT,{},,1.4,PHP,False,PHP constants → DEFAULT_CONSTANT
+PHP_HEREDOC_CONTENT,explicit,,"{""FOREGROUND"": ""ccbfaf""}",— DEFAULT_DOC_COMMENT / PHP_HEREDOC_ID,1.4,PHP,False,Heredoc body muted doc-like ccbfaf (align PHP_HEREDOC_ID family)
+PHP_PARAMETER,baseAttributes,DEFAULT_PARAMETER,{},,1.4,PHP,False,PHP params → DEFAULT_PARAMETER
+PHP_VAR,baseAttributes,DEFAULT_LOCAL_VARIABLE,{},,1.4,PHP,False,PHP vars → DEFAULT_LOCAL_VARIABLE (pin empty → identifier)
+PHP_SCRIPTING_BACKGROUND,explicit,,"{""BACKGROUND"": ""222120""}",dark4,1.4,PHP,True,PHP island background dark4 (222120) subtle lift; keep existing EFFECT_TYPE if any
+TS.GLOBAL_VARIABLE,baseAttributes,DEFAULT_GLOBAL_VARIABLE,{},,1.5,TypeScript,False,TS globals → DEFAULT_GLOBAL_VARIABLE
+TS_AUDIT_FOLLOWUP,process,,{},,1.5,TypeScript,False,Process: audit WebStorm TS.* tree after IDE update; not a color key
+CSHARP_AUDIT_FOLLOWUP,process,,{},,1.6,C#,False,Process: audit Rider ReSharper keys; Hiberbee already has 28
+CSHARP_KEEP_EXISTING,process,,{},,1.6,C#,False,Keep existing ReSharper.* colors unchanged
+CSHARP_BASEATTR_WHERE_SYNONYM,process,,{},,1.6,C#,False,"Where ReSharper key is synonym, prefer baseAttributes to DEFAULT_*"
+JS.GLOBAL_FUNCTION,baseAttributes,DEFAULT_FUNCTION_DECLARATION,{},,1.7,JavaScript,False,JS global fn → function decl
+JS.GLOBAL_VARIABLE,baseAttributes,DEFAULT_GLOBAL_VARIABLE,{},,1.7,JavaScript,False,JS global var → global variable
+JS.INSTANCE_MEMBER_FUNCTION,baseAttributes,DEFAULT_INSTANCE_METHOD,{},,1.7,JavaScript,False,JS methods → instance method
+JS.LOCAL_VARIABLE,baseAttributes,DEFAULT_LOCAL_VARIABLE,{},,1.7,JavaScript,False,JS locals → local variable pin
+JS.EXPORTED.VARIABLE,baseAttributes,DEFAULT_GLOBAL_VARIABLE,{},,1.7,JavaScript,False,Exported vars ≈ global
+JS.KEYWORD,baseAttributes,DEFAULT_KEYWORD,{},,1.7,JavaScript,False,JS keywords → DEFAULT_KEYWORD
+JS.VALID_STRING_ESCAPE,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,1.7,JavaScript,False,JS escapes → valid escape
+JS.INVALID_STRING_ESCAPE,baseAttributes,DEFAULT_INVALID_STRING_ESCAPE,{},,1.7,JavaScript,False,JS bad escapes → invalid escape
+JS.JSX_CLIENT_COMPONENT,explicit,,"{""FOREGROUND"": ""9896ff""}",— DEFAULT_STATIC_FIELD,1.7,JavaScript,True,Client components distinct violet 9896ff (not string green)
+REGEXP.BRACES,baseAttributes,DEFAULT_BRACES,{},,2.1,RegExp,False,Regexp braces → braces
+REGEXP.BRACKETS,baseAttributes,DEFAULT_BRACKETS,{},,2.1,RegExp,False,Regexp brackets → brackets
+REGEXP.PARENTHS,baseAttributes,DEFAULT_PARENTHS,{},,2.1,RegExp,False,Regexp parens → parens
+REGEXP.META,baseAttributes,DEFAULT_KEYWORD,{},,2.1,RegExp,False,Regexp meta → keyword
+REGEXP.ESC_CHARACTER,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,2.1,RegExp,False,Regexp escapes → valid escape
+REGEXP.QUOTE_CHARACTER,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,2.1,RegExp,False,Regexp quotes → escape family
+REGEXP.COMMA,baseAttributes,DEFAULT_COMMA,{},,2.1,RegExp,False,Regexp comma → comma
+REGEXP.INVALID_STRING_ESCAPE,baseAttributes,DEFAULT_INVALID_STRING_ESCAPE,{},,2.1,RegExp,False,Regexp invalid escape
+REGEXP.REDUNDANT_ESCAPE,explicit,,"{""FONT_TYPE"": ""1"", ""FOREGROUND"": ""6f6e6d""}",light1,2.1,RegExp,False,Redundant escape muted light1 + bold
+CSS.HASH,explicit,,"{""FOREGROUND"": ""fd971f""}",— CSS.COLOR fd971f,2.2,CSS,False,Color hashes = CSS.COLOR orange fd971f
+CSS.IDENT,explicit,,"{""FOREGROUND"": ""a9dc76""}",— CSS.CLASS_NAME a9dc76,2.2,CSS,False,CSS idents ≈ class names a9dc76
+CSS.PROPERTY_VALUE,explicit,,"{""FOREGROUND"": ""ee9b70""}",— DEFAULT_PARAMETER,2.2,CSS,False,Property values warm parameter ee9b70
+SASS_COMMENT,baseAttributes,DEFAULT_LINE_COMMENT,{},,2.2,CSS,False,SASS comments → line comment (no CSS.COMMENT key in HB)
+SASS_IDENTIFIER,pin_empty,,{},,2.2,CSS,False,Pin empty; inherit / DEFAULT_IDENTIFIER
+SASS_VARIABLE,baseAttributes,DEFAULT_INSTANCE_FIELD,{},,2.2,CSS,False,SASS vars → instance field
+MARKDOWN_AUTO_LINK,explicit,,"{""EFFECT_COLOR"": ""f65f87"", ""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""f65f87""}",— MARKDOWN.AUTO_LINK f65f87,2.3,Markdown,False,Mirror existing MARKDOWN.AUTO_LINK
+MARKDOWN_LINK_TEXT,explicit,,"{""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""78dce8""}",— MARKDOWN.EXPLICIT_LINK / MARKDOWN_LINK_DEFINITION,2.3,Markdown,False,Link text cyan 78dce8 like EXPLICIT_LINK
+MARKDOWN_IMAGE,explicit,,"{""FOREGROUND"": ""f65f87""}",— MARKDOWN.IMAGE,2.3,Markdown,False,Mirror MARKDOWN.IMAGE f65f87
+MARKDOWN_VERIFY_DOTTED,process,,{},,2.3,Markdown,False,Verify underscore vs MARKDOWN.* dotted IDs at runtime
+CUSTOM_KEYWORD1_ATTRIBUTES,explicit,,"{""FOREGROUND"": ""ee7762""}",— DEFAULT_KEYWORD,2.4,Custom,False,"KW1 = keyword coral ee7762 (KW2 green, KW3 string, KW4 violet already)"
+CUSTOM_STRING_ATTRIBUTES,baseAttributes,DEFAULT_STRING,{},,2.4,Custom,False,Custom strings → string
+CUSTOM_VALID_STRING_ESCAPE_ATTRIBUTES,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,2.4,Custom,False,Custom escapes → valid
+CUSTOM_INVALID_STRING_ESCAPE_ATTRIBUTES,baseAttributes,DEFAULT_INVALID_STRING_ESCAPE,{},,2.4,Custom,False,Custom invalid escapes
+JSP_DIRECTIVE_NAME,baseAttributes,DEFAULT_METADATA,{},,2.5,JSP,False,JSP directives ≈ metadata/annotations
+JSP_ATTRIBUTE_NAME,baseAttributes,DEFAULT_ATTRIBUTE,{},,2.5,JSP,False,JSP attrs → DEFAULT_ATTRIBUTE
+JSP_DIRECTIVE_BACKGROUND,explicit,,"{""BACKGROUND"": ""222120""}",dark4,2.5,JSP,False,Directive region dark4
+JSP_SCRIPTING_BACKGROUND,explicit,,"{""BACKGROUND"": ""222120""}",dark4,2.5,JSP,False,Scripting island dark4 like PHP scripting
+QUTE_BACKGROUND,explicit,,"{""BACKGROUND"": ""272625""}",dark5,2.5,JSP,False,Qute injection dark5 gutter-adjacent
+ANNOTATIONS_LAST_COMMIT_COLOR,color,,"{""value"": ""dfdedd""}",light8,3.1,colors,False,Last-commit author text ≈ light8 near caret/annotations readability
+FILESTATUS_RENAMED,color,,"{""value"": ""78dce8""}",— FILESTATUS_MODIFIED,3.1,colors,False,Renamed ≈ modified cyan 78dce8
+FILESTATUS_addedOutside,color,,"{""value"": ""a9dc76""}",— FILESTATUS_ADDED,3.1,colors,False,Added-outside ≈ added green a9dc76
+FILESTATUS_changelistConflict,color,,"{""value"": ""f65f87""}",— FILESTATUS_CHANGELIST_CONFLICT,3.1,colors,False,Alias of CHANGELIST_CONFLICT f65f87; add if camelCase still read
+FILESTATUS_modifiedOutside,color,,"{""value"": ""78dce8""}",— FILESTATUS_MODIFIED_OUTSIDE,3.1,colors,False,Alias of MODIFIED_OUTSIDE 78dce8
+FILESTATUS_IDEA_SVN_FILESTATUS_OBSTRUCTED,color,,"{""value"": ""ffd866""}",— FILESTATUS_UNKNOWN,3.1,colors,False,Obstructed ≈ unknown yellow ffd866
+FILESTATUS_IDEA_SVN_REPLACED,color,,"{""value"": ""a9dc76""}",— FILESTATUS_ADDED,3.1,colors,False,Replaced ≈ added green
+IGNORED_DELETED_LINES_BORDER_COLOR,color,,"{""value"": ""727072""}",— FILESTATUS_DELETED,3.1,colors,False,Ignored-deleted border muted 727072
+IGNORED_MODIFIED_LINES_BORDER_COLOR,color,,"{""value"": ""78dce8""}",— FILESTATUS_MODIFIED,3.1,colors,False,Ignored-modified border cyan 78dce8 (parallel to modified)
+DOC_COMMENT_GUIDE,color,,"{""value"": ""424140""}",dark8,3.1,colors,False,Doc vertical guide subtle dark8
+DOC_COMMENT_LINK,color,,"{""value"": ""409cff""}",blue,3.1,colors,False,Doc links = blue 409cff
+FOLDED_TEXT_BORDER_COLOR,color,,"{""value"": ""424140""}",dark8,3.1,colors,False,Fold border dark8
+INLINE_REFACTORING_SETTINGS_DEFAULT,color,,"{""value"": ""424140""}",dark8,3.1,colors,False,Inline refactor chrome dark8
+INLINE_REFACTORING_SETTINGS_FOCUSED,color,,"{""value"": ""525150""}",dark10,3.1,colors,False,Focused refactor control dark10
+INLINE_REFACTORING_SETTINGS_HOVERED,color,,"{""value"": ""474645""}",dark9,3.1,colors,False,Hover refactor control dark9
+NEXT_EDIT.DIFF_AFTER_BACKGROUND,color,,"{""value"": ""203020""}",greenBg,3.1,colors,True,Next Edit insertion tint greenBg
+NEXT_EDIT.EDIT_RANGE.GUTTER_BACKGROUND,color,,"{""value"": ""302030""}",violetBg,3.1,colors,True,Next Edit range gutter violetBg
+NEXT_EDIT.EDIT_RANGE.LINE_BACKGROUND,color,,"{""value"": ""171615""}",dark3,3.1,colors,True,Next Edit line wash dark3 (deeper than gutter)
+NEXT_EDIT.INSIGHT_BACKGROUND,color,,"{""value"": ""302030""}",violetBg,3.1,colors,True,Insight panel violetBg
+NEXT_EDIT.REMOVAL_BACKGROUND,color,,"{""value"": ""320f0f""}",redBg,3.1,colors,True,Removal suggestion redBg
+ScrollBar.Mac.thumbColor,color,,"{""value"": ""424140""}",dark8,3.1,colors,True,Idle Mac thumb dark8 solid (scheme may accept 6-digit); optional alpha via yellowDark pattern only if needed
+ScrollBar.Mac.hoverThumbColor,color,,"{""value"": ""525150""}",dark10,3.1,colors,True,Hover Mac thumb dark10 (matches ui.ScrollBar.hoverThumbColor token)
+DOC_CODE_BLOCK,explicit,,"{""BACKGROUND"": ""222120"", ""EFFECT_COLOR"": ""424140"", ""FOREGROUND"": ""dfdedd""}",light8;dark4;dark8,3.2,Doc,True,"Quick Doc code block: light text on dark4, border dark8"
+DOC_CODE_INLINE,explicit,,"{""BACKGROUND"": ""373635"", ""FOREGROUND"": ""dfdedd""}",light8;dark7,3.2,Doc,False,Inline code chip light8 on dark7
+DOC_TIPS_SHORTCUT,explicit,,"{""EFFECT_COLOR"": ""6f6e6d"", ""FOREGROUND"": ""dfdedd""}",light8;light1,3.2,Doc,False,Shortcut tips light8 with light1 outline
+INLAY_DEFAULT,explicit,,"{""BACKGROUND"": ""424140"", ""FOREGROUND"": ""7f7e7d""}",light2;dark8,3.2,Inlay,True,Default inlay = hint gray on dark8
+INLAY_TEXT_WITHOUT_BACKGROUND,explicit,,"{""FOREGROUND"": ""7f7e7d""}",light2,3.2,Inlay,False,Bare inlay text light2
+ANNOTATION_NAME_ATTRIBUTES,baseAttributes,DEFAULT_METADATA,{},,3.2,Java,False,Annotation names → metadata/accent
+GO_KEYWORD,baseAttributes,DEFAULT_KEYWORD,{},,4.1,Go,False,Go keyword
+GO_BUILTIN_CONSTANT,baseAttributes,DEFAULT_CONSTANT,{},,4.1,Go,False,Go builtin const/var → constant
+GO_BUILTIN_VARIABLE,baseAttributes,DEFAULT_CONSTANT,{},,4.1,Go,False,Go builtin const/var → constant
+GO_BUILTIN_FUNCTION,explicit,,"{""FOREGROUND"": ""ee9b70""}",— DEFAULT_PARAMETER,4.1,Go,False,Builtin fn names warm parameter (distinct from calls)
+GO_BUILTIN_FUNCTION_CALL,baseAttributes,DEFAULT_FUNCTION_CALL,{},,4.1,Go,False,Go calls → function call
+GO_EXPORTED_FUNCTION_CALL,baseAttributes,DEFAULT_FUNCTION_CALL,{},,4.1,Go,False,Go calls → function call
+GO_LOCAL_FUNCTION_CALL,baseAttributes,DEFAULT_FUNCTION_CALL,{},,4.1,Go,False,Go calls → function call
+GO_BUILTIN_TYPE_REFERENCE,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_TYPE_REFERENCE,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_TYPE_SPECIFICATION,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_EXPORTED_INTERFACE_REFERENCE,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_LOCAL_INTERFACE_REFERENCE,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_EXPORTED_STRUCT_REFERENCE,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_LOCAL_STRUCT_REFERENCE,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_PACKAGE_EXPORTED_INTERFACE,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_PACKAGE_LOCAL_INTERFACE,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_PACKAGE_EXPORTED_STRUCT,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_PACKAGE_LOCAL_STRUCT,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_IDENTIFIER,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_LABEL,baseAttributes,DEFAULT_CLASS_NAME,{},,4.1,Go,False,Go types/structs/interfaces → class cyan
+GO_FUNCTION_PARAMETER,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ee9b70""}",— DEFAULT_PARAMETER,4.1,Go,False,Params/receivers/local members parameter + italic
+GO_METHOD_RECEIVER,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ee9b70""}",— DEFAULT_PARAMETER,4.1,Go,False,Params/receivers/local members parameter + italic
+GO_STRUCT_LOCAL_MEMBER,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ee9b70""}",— DEFAULT_PARAMETER,4.1,Go,False,Params/receivers/local members parameter + italic
+GO_PACKAGE,baseAttributes,DEFAULT_STATIC_FIELD,{},,4.1,Go,False,Package path ≈ static field violet
+GO_PACKAGE_EXPORTED_VARIABLE_CALL,baseAttributes,DEFAULT_STATIC_FIELD,{},,4.1,Go,False,Package path ≈ static field violet
+GO_PACKAGE_LOCAL_VARIABLE_CALL,baseAttributes,DEFAULT_STATIC_FIELD,{},,4.1,Go,False,Package path ≈ static field violet
+GO_STRING,baseAttributes,DEFAULT_STRING,{},,4.1,Go,False,Go string
+GO_NUMBER,baseAttributes,DEFAULT_NUMBER,{},,4.1,Go,False,Go number
+GO_BLOCK_COMMENT,baseAttributes,DEFAULT_LINE_COMMENT,{},,4.1,Go,False,Go comments
+GO_COMMENT_REFERENCE,baseAttributes,DEFAULT_LINE_COMMENT,{},,4.1,Go,False,Go comments
+GO_COMMENT_KEYWORD,explicit,,"{""EFFECT_COLOR"": ""ffb900"", ""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""ffb900""}",accent,4.1,Go,False,Comment keywords like doc tags
+GO_VALID_STRING_ESCAPE,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,4.1,Go,False,Go valid escape
+GO_INVALID_STRING_ESCAPE,baseAttributes,DEFAULT_INVALID_STRING_ESCAPE,{},,4.1,Go,False,Go invalid escape
+GO_SHADOWING_VARIABLE,explicit,,"{""FOREGROUND"": ""dfdedd""}",light8,4.1,Go,False,Shadowing var slightly bright light8
+GO_REASSIGNMENT_IN_SHORT_VAR_DECLARATION,explicit,,"{""EFFECT_COLOR"": ""8e8cb7"", ""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""8e8cb7""}",— DEFAULT_REASSIGNED_LOCAL_VARIABLE,4.1,Go,False,Reassignment underline like reassigned local
+GO_BAD_TOKEN,explicit,,"{""EFFECT_COLOR"": ""f25022"", ""EFFECT_TYPE"": ""2""}",— DEFAULT_INVALID / constant red,4.1,Go,False,Bad token wave error red f25022
+GO_COMMA,pin_empty,,{},,4.1,Go,False,Pin empty punctuation
+GO_DOT,pin_empty,,{},,4.1,Go,False,Pin empty punctuation
+GO_OPERATOR,pin_empty,,{},,4.1,Go,False,Pin empty punctuation
+GO_SEMICOLON,pin_empty,,{},,4.1,Go,False,Pin empty punctuation
+GO_COLON,explicit,,"{""EFFECT_TYPE"": ""5"", ""FOREGROUND"": ""dfdedd""}",light8,4.1,Go,False,Colon light8 (no dark bg — keep FG only)
+GO_PACKAGE_EXPORTED_VARIABLE,pin_empty,,{},,4.1,Go,False,Pin empty exported member
+GO_STRUCT_EXPORTED_MEMBER,pin_empty,,{},,4.1,Go,False,Pin empty exported member
+PY.KEYWORD,baseAttributes,DEFAULT_KEYWORD,{},,4.2,Python,False,Python → DEFAULT_KEYWORD
+PY.NUMBER,baseAttributes,DEFAULT_NUMBER,{},,4.2,Python,False,Python → DEFAULT_NUMBER
+PY.OPERATION_SIGN,baseAttributes,DEFAULT_OPERATION_SIGN,{},,4.2,Python,False,Python → DEFAULT_OPERATION_SIGN
+PY.FUNCTION_CALL,baseAttributes,DEFAULT_FUNCTION_CALL,{},,4.2,Python,False,Python → DEFAULT_FUNCTION_CALL
+PY.METHOD_CALL,baseAttributes,DEFAULT_FUNCTION_CALL,{},,4.2,Python,False,Python → DEFAULT_FUNCTION_CALL
+PY.CLASS_DEFINITION,baseAttributes,DEFAULT_CLASS_NAME,{},,4.2,Python,False,Python → DEFAULT_CLASS_NAME
+PY.PREDEFINED_DEFINITION,baseAttributes,DEFAULT_CLASS_NAME,{},,4.2,Python,False,Python → DEFAULT_CLASS_NAME
+PY.PREDEFINED_USAGE,baseAttributes,DEFAULT_CLASS_REFERENCE,{},,4.2,Python,False,Python → DEFAULT_CLASS_REFERENCE
+PY.DOC_COMMENT,baseAttributes,DEFAULT_DOC_COMMENT,{},,4.2,Python,False,Python → DEFAULT_DOC_COMMENT
+PY.DOC_COMMENT_TAG,baseAttributes,DEFAULT_DOC_COMMENT_TAG,{},,4.2,Python,False,Python → DEFAULT_DOC_COMMENT_TAG
+PY.LINE_COMMENT,baseAttributes,DEFAULT_LINE_COMMENT,{},,4.2,Python,False,Python → DEFAULT_LINE_COMMENT
+PY.BUILTIN_NAME,baseAttributes,DEFAULT_PREDEFINED_SYMBOL,{},,4.2,Python,False,Builtins → predefined
+PY.FSTRING_FRAGMENT_BRACES,explicit,,"{""FOREGROUND"": ""ee9b70""}",— DEFAULT_PARAMETER,4.2,Python,False,f-string braces warm parameter
+PY.FSTRING_FRAGMENT_COLON,explicit,,"{""FOREGROUND"": ""ee9b70""}",— DEFAULT_PARAMETER,4.2,Python,False,f-string format colon parameter
+PY.STRING.U,explicit,,"{""FOREGROUND"": ""a9dc76""}",— PY.STRING,4.2,Python,False,Match existing PY.STRING a9dc76 (Hiberbee Python strings are green)
+PY.BRACES,pin_empty,,{},,4.2,Python,False,Pin empty Python punctuation
+PY.BRACKETS,pin_empty,,{},,4.2,Python,False,Pin empty Python punctuation
+PY.PARENTHS,pin_empty,,{},,4.2,Python,False,Pin empty Python punctuation
+PY.COMMA,pin_empty,,{},,4.2,Python,False,Pin empty Python punctuation
+PY.DOT,pin_empty,,{},,4.2,Python,False,Pin empty Python punctuation
+PY.SELF_PARAMETER,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ed005c""}",— existing PY.SELF_PARAMETER,4.2,Python,False,Keep existing ed005c; add italic FONT_TYPE=2 only
+RUBY_LOCAL_VAR_ID,baseAttributes,DEFAULT_LOCAL_VARIABLE,{},,4.3,Ruby,False,Ruby/HAML → DEFAULT_LOCAL_VARIABLE
+RUBY_PARAMETER_ID,baseAttributes,DEFAULT_PARAMETER,{},,4.3,Ruby,False,Ruby/HAML → DEFAULT_PARAMETER
+HAML_COMMENT,baseAttributes,DEFAULT_DOC_COMMENT,{},,4.3,Ruby,False,Ruby/HAML → DEFAULT_DOC_COMMENT
+HAML_RUBY_CODE,baseAttributes,INJECTED_LANGUAGE_FRAGMENT,{},,4.3,Ruby,False,Ruby/HAML → INJECTED_LANGUAGE_FRAGMENT
+RUBY_COMMENT,baseAttributes,DEFAULT_LINE_COMMENT,{},,4.3,Ruby,False,Ruby comment
+RUBY_CONSTANT,baseAttributes,DEFAULT_CLASS_NAME,{},,4.3,Ruby,False,Ruby constant ≈ class
+RUBY_CONSTANT_DECLARATION,baseAttributes,DEFAULT_CONSTANT,{},,4.3,Ruby,False,Ruby const decl → constant
+RUBY_CVAR,baseAttributes,DEFAULT_STATIC_FIELD,{},,4.3,Ruby,False,Class var → static field
+RUBY_GVAR,baseAttributes,DEFAULT_GLOBAL_VARIABLE,{},,4.3,Ruby,False,Global var
+RUBY_IVAR,baseAttributes,DEFAULT_INSTANCE_FIELD,{},,4.3,Ruby,False,Instance var → field
+RUBY_METHOD_NAME,baseAttributes,DEFAULT_FUNCTION_DECLARATION,{},,4.3,Ruby,False,Method name → function decl
+RUBY_NUMBER,baseAttributes,DEFAULT_NUMBER,{},,4.3,Ruby,False,Ruby number
+RUBY_SYMBOL,baseAttributes,DEFAULT_STATIC_FIELD,{},,4.3,Ruby,False,Symbol ≈ static field violet
+RUBY_ESCAPE_SEQUENCE,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,4.3,Ruby,False,Ruby escape
+RUBY_INVALID_ESCAPE_SEQUENCE,baseAttributes,DEFAULT_INVALID_STRING_ESCAPE,{},,4.3,Ruby,False,Ruby bad escape
+RUBY_INTERPOLATED_STRING,baseAttributes,DEFAULT_STRING,{},,4.3,Ruby,False,Interpolated string
+RUBY_HEREDOC_CONTENT,explicit,,"{""FOREGROUND"": ""ffd866""}",— DEFAULT_STRING,4.3,Ruby,False,Heredoc content string yellow (RUBY_HEREDOC_ID already muted)
+RUBY_HASH_ASSOC,explicit,,"{""FOREGROUND"": ""dfdedd""}",light8,4.3,Ruby,False,Hash rocket light8
+RUBY_BAD_CHARACTER,explicit,,"{""EFFECT_COLOR"": ""f65f87"", ""EFFECT_TYPE"": ""2""}",— BAD_CHARACTER family f65f87,4.3,Ruby,False,Bad char wave
+RUBY_REGEXP,explicit,,"{""BACKGROUND"": ""222120""}",dark4,4.3,Ruby,False,Regexp region dark4
+RUBY_LINE_CONTINUATION,pin_empty,,{},,4.3,Ruby,False,Pin empty
+HAML_ID,explicit,,"{""FOREGROUND"": ""92d923""}",green,4.3,Ruby,False,HAML id green
+RHTML_COMMENT_ID,baseAttributes,DEFAULT_LINE_COMMENT,{},,4.3,Ruby,False,RHTML comment (HTML_COMMENT may not exist; use line comment)
+RHTML_EXPRESSION_END_ID,baseAttributes,XML_TAG_NAME,{},,4.3,Ruby,False,RHTML_EXPRESSION_END_ID → XML_TAG_NAME
+RHTML_SCRIPTLET_END_ID,baseAttributes,XML_TAG_NAME,{},,4.3,Ruby,False,RHTML_SCRIPTLET_END_ID → XML_TAG_NAME
+RHTML_SCRIPTLET_START_ID,baseAttributes,XML_TAG_NAME,{},,4.3,Ruby,False,RHTML_SCRIPTLET_START_ID → XML_TAG_NAME
+KOTLIN_ARROW,pin_empty,,{},,4.4,Kotlin,False,Pin empty arrow
+KOTLIN_ENUM_ENTRY,baseAttributes,DEFAULT_STATIC_FIELD,{},,4.4,Kotlin,False,Enum entry → static field
+KOTLIN_PACKAGE_PROPERTY,baseAttributes,DEFAULT_STATIC_FIELD,{},,4.4,Kotlin,False,Package property → static field
+KOTLIN_LABEL,explicit,,"{""FOREGROUND"": ""57d1eb""}",— DEFAULT_CLASS_NAME,4.4,Kotlin,False,Labels cyan class-like 57d1eb
+JSON.KEYWORD,baseAttributes,DEFAULT_KEYWORD,{},,5.1,JSON,False,JSON true/false/null → keyword
+JSON.NUMBER,baseAttributes,DEFAULT_NUMBER,{},,5.1,JSON,False,JSON number
+JSON.PROPERTY_KEY,explicit,,"{""FOREGROUND"": ""9380ff""}",— DEFAULT_COMMA / YAML_SCALAR_KEY 9380ff,5.1,JSON,False,Keys violet 9380ff like YAML_SCALAR_KEY
+JSON.STRING,baseAttributes,DEFAULT_STRING,{},,5.1,JSON,False,JSON string
+JSON.VALID_ESCAPE,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,5.1,JSON,False,JSON escape
+YAML_ANCHOR,explicit,,"{""FOREGROUND"": ""ee9b70""}",— DEFAULT_PARAMETER,5.1,YAML,False,YAML anchors parameter warm
+YAML_TEXT,baseAttributes,DEFAULT_STRING,{},,5.1,YAML,False,YAML text ≈ string
+org.toml.KEY,explicit,,"{""FOREGROUND"": ""57d1eb""}",— DEFAULT_CLASS_NAME,5.1,TOML,False,TOML keys cyan class
+org.toml.DATE,explicit,,"{""FOREGROUND"": ""ee9b70""}",— DEFAULT_PARAMETER,5.1,TOML,False,TOML dates parameter
+PROPERTIES.INVALID_STRING_ESCAPE,baseAttributes,DEFAULT_INVALID_STRING_ESCAPE,{},,5.1,Properties,False,Properties invalid escape
+PROPERTIES.VALID_STRING_ESCAPE,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,5.1,Properties,False,Properties valid escape
+CONSOLE_SELECTED_PARAMETER,explicit,,"{""BACKGROUND"": ""222120"", ""FOREGROUND"": ""9896ff""}",— DEFAULT_STATIC_FIELD;dark4,5.2,Console,False,Selected console param
+LOGCAT_ASSERT_OUTPUT,explicit,,"{""FOREGROUND"": ""9380ff""}",— LOGCAT_V2_LEVEL_ASSERT,5.2,Logcat,False,Mirror LOGCAT_V2_LEVEL_ASSERT
+LOGCAT_DEBUG_OUTPUT,explicit,,"{""FOREGROUND"": ""57d1eb""}",— LOGCAT_V2_LEVEL_DEBUG,5.2,Logcat,False,Mirror LOGCAT_V2_LEVEL_DEBUG
+LOGCAT_ERROR_OUTPUT,explicit,,"{""FOREGROUND"": ""f25022""}",— LOGCAT_V2_LEVEL_ERROR,5.2,Logcat,False,Mirror LOGCAT_V2_LEVEL_ERROR
+LOGCAT_INFO_OUTPUT,explicit,,"{""FOREGROUND"": ""92d923""}",— LOGCAT_V2_LEVEL_INFO,5.2,Logcat,False,Mirror LOGCAT_V2_LEVEL_INFO
+LOGCAT_VERBOSE_OUTPUT,explicit,,"{""FOREGROUND"": ""acacac""}",— LOGCAT_V2_LEVEL_VERBOSE,5.2,Logcat,False,Mirror LOGCAT_V2_LEVEL_VERBOSE
+LOGCAT_WARNING_OUTPUT,explicit,,"{""FOREGROUND"": ""ffb900""}",— LOGCAT_V2_LEVEL_WARNING,5.2,Logcat,False,Mirror LOGCAT_V2_LEVEL_WARNING
+JAVA_KEYWORD,baseAttributes,DEFAULT_KEYWORD,{},,6.1,Java,False,Java keyword
+CONSTRUCTOR_CALL_ATTRIBUTES,baseAttributes,DEFAULT_CLASS_NAME,{},,6.1,Java,False,Ctor call ≈ class
+CONSTRUCTOR_DECLARATION_ATTRIBUTES,baseAttributes,DEFAULT_CLASS_NAME,{},,6.1,Java,False,Ctor decl ≈ class
+INTERFACE_NAME_ATTRIBUTES,baseAttributes,DEFAULT_INTERFACE_NAME,{},,6.1,Java,False,Interface name
+STATIC_METHOD_ATTRIBUTES,baseAttributes,DEFAULT_STATIC_METHOD,{},,6.1,Java,False,Static method
+Abstract class name,baseAttributes,DEFAULT_CLASS_NAME,{},,6.1,Space-named,False,Abstract class
+Interface name,baseAttributes,DEFAULT_INTERFACE_NAME,{},,6.1,Space-named,False,Interface
+Method call,baseAttributes,DEFAULT_FUNCTION_CALL,{},,6.1,Space-named,False,Method call
+Annotation,baseAttributes,DEFAULT_METADATA,{},,6.1,Space-named,False,Annotation
+Anotation attribute name,baseAttributes,DEFAULT_PARAMETER,{},,6.1,Space-named,False,Annotation attr (sic spelling)
+Number,baseAttributes,DEFAULT_NUMBER,{},,6.1,Space-named,False,Number
+String,baseAttributes,DEFAULT_STRING,{},,6.1,Space-named,False,String
+Valid string escape,baseAttributes,DEFAULT_VALID_STRING_ESCAPE,{},,6.1,Space-named,False,Escape
+Method declaration,baseAttributes,DEFAULT_FUNCTION_DECLARATION,{},,6.1,Space-named,False,Method decl if present as space name
+Standart Java Collection,explicit,,"{""EFFECT_TYPE"": ""5""}",,6.1,Space-named,False,Collection type dotted underline only
+Class,baseAttributes,DEFAULT_CLASS_NAME,{},,6.1,Space-named,False,Class space-name → class (or CLASS_NAME_ATTRIBUTES if exists)
+Closure braces,baseAttributes,DEFAULT_BRACES,{},,6.1,Space-named,False,Closure braces → braces
+Label,baseAttributes,DEFAULT_LABEL,{},,6.1,Space-named,False,Label
+List/map to object conversion,pin_empty,,{},,6.1,Space-named,False,Pin empty
+TAG_ATTR_KEY,baseAttributes,DEFAULT_ATTRIBUTE,{},,6.1,Space-named,False,Tag attr key
+Static method access,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""9896ff""}",— DEFAULT_STATIC_FIELD,6.5,Python,False,Python static method access
+Static property reference ID,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""9896ff""}",— DEFAULT_STATIC_FIELD,6.5,Python,False,Python static property
+Unresolved reference access,explicit,,"{""EFFECT_COLOR"": ""7f7e7d"", ""EFFECT_TYPE"": ""5"", ""FOREGROUND"": ""6f6e6d""}",light1;light2,6.5,Python,False,Unresolved muted + dotted
+Scala Abstract class,baseAttributes,DEFAULT_CLASS_NAME,{},,6.2,Scala,False,Scala abstract class
+Scala Predefined types,baseAttributes,DEFAULT_CLASS_NAME,{},,6.2,Scala,False,Scala predefined types
+Scala Type Alias,baseAttributes,DEFAULT_STATIC_FIELD,{},,6.2,Scala,False,Type alias violet
+Scala Type parameter,baseAttributes,DEFAULT_STATIC_FIELD,{},,6.2,Scala,False,Type param violet
+ScalaDoc @param value,baseAttributes,DEFAULT_DOC_COMMENT_TAG_VALUE,{},,6.2,Scala,False,ScalaDoc param value
+Groovy constructor call,baseAttributes,DEFAULT_CLASS_NAME,{},,6.2,Groovy,False,Groovy ctor
+Groovy method declaration,baseAttributes,DEFAULT_FUNCTION_DECLARATION,{},,6.2,Groovy,False,Groovy method
+Groovy parameter,baseAttributes,DEFAULT_PARAMETER,{},,6.2,Groovy,False,Groovy param
+Groovy reassigned parameter,baseAttributes,DEFAULT_REASSIGNED_PARAMETER,{},,6.2,Groovy,False,Groovy reassigned param
+SWIFT_ATTRIBUTE_NAME,baseAttributes,DEFAULT_METADATA,{},,6.2,Swift,False,Swift attribute
+SWIFT_MODULE_NAME,baseAttributes,DEFAULT_CLASS_NAME,{},,6.2,Swift,False,Swift module
+OC.DIRECTIVE,baseAttributes,DEFAULT_METADATA,{},,6.3,ObjC,False,ObjC directive ≈ metadata
+OC.METHOD_DECLARATION,baseAttributes,DEFAULT_FUNCTION_DECLARATION,{},,6.3,ObjC,False,ObjC method
+OC.CONDITIONALLY_NOT_COMPILED,explicit,,"{""FOREGROUND"": ""6f6e6d""}",light1,6.3,ObjC,False,Conditionally off code muted light1
+VELOCITY_DIRECTIVE,baseAttributes,DEFAULT_CLASS_NAME,{},,6.4,Velocity,False,Velocity directive
+VELOCITY_KEYWORD,baseAttributes,DEFAULT_KEYWORD,{},,6.4,Velocity,False,Velocity keyword
+VELOCITY_REFERENCE,baseAttributes,DEFAULT_FUNCTION_CALL,{},,6.4,Velocity,False,Velocity ref ≈ call
+VELOCITY_SCRIPTING_BACKGROUND,explicit,,"{""BACKGROUND"": ""222120"", ""FOREGROUND"": ""dfdedd""}",light8;dark4,6.4,Velocity,False,Velocity scripting island
+XPATH.FUNCTION,baseAttributes,DEFAULT_FUNCTION_CALL,{},,6.4,XPath,False,XPath function
+XPATH.KEYWORD,baseAttributes,DEFAULT_KEYWORD,{},,6.4,XPath,False,XPath keyword
+XPATH.XPATH_VARIABLE,baseAttributes,DEFAULT_LOCAL_VARIABLE,{},,6.4,XPath,False,XPath variable
+PROTO_IDENTIFIER,baseAttributes,DEFAULT_CLASS_NAME,{},,6.4,Proto,False,Protobuf id
+PROTOTEXT_IDENTIFIER,baseAttributes,DEFAULT_CLASS_NAME,{},,6.4,Proto,False,Prototext id
+QL_ATTRIBUTE,pin_empty,,{},,6.4,CodeQL,False,Pin empty CodeQL attribute
+QL_FUNCTION,baseAttributes,DEFAULT_CLASS_NAME,{},,6.4,CodeQL,False,CodeQL function
+QL_PARAMETER,explicit,,"{""FOREGROUND"": ""dfdedd""}",light8,6.4,CodeQL,False,CodeQL param light8
+HTTP_REQUEST_MESSAGE_BODY,baseAttributes,DEFAULT_PARAMETER,{},,6.4,HTTP,False,HTTP body warm parameter
+JUPYTER_CELL_MARKER,baseAttributes,DEFAULT_KEYWORD,{},,6.4,Jupyter,False,Jupyter cell marker keyword-colored
+GRID_ERROR_VALUE,explicit,,"{""EFFECT_COLOR"": ""f65f87"", ""EFFECT_TYPE"": ""2"", ""ERROR_STRIPE_COLOR"": ""f25022""}",— error family,6.4,Grid,False,Grid error wave
+MAKO.SUBSTITUTION,pin_empty,,{},,6.4,Mako,False,Pin empty
+SPY-JS.EXCEPTION,explicit,,"{""EFFECT_TYPE"": ""2""}",,6.4,SpyJS,False,Spy-js exception underline
+SPY-JS.FUNCTION_SCOPE,explicit,,"{""EFFECT_TYPE"": ""2""}",,6.4,SpyJS,False,Spy-js scope underline
+com.plan9.IDENTIFIER,baseAttributes,DEFAULT_IDENTIFIER,{},,6.4,Plan9,False,Plan9 id
+com.plan9.LABEL,baseAttributes,DEFAULT_LABEL,{},,6.4,Plan9,False,Plan9 label
+com.plan9.REGISTER,baseAttributes,DEFAULT_PARAMETER,{},,6.4,Plan9,False,Plan9 register
+IDENTIFIER_UNDER_CARET_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""203020"", ""EFFECT_COLOR"": ""78dce8"", ""EFFECT_TYPE"": ""1"", ""ERROR_STRIPE_COLOR"": ""92d923""}",greenBg;green;— keep existing EFFECT_COLOR 78dce8,7.1,Partial,True,Read occurrences: greenBg + green stripe; keep cyan effect
+WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""403018"", ""EFFECT_COLOR"": ""afaead"", ""EFFECT_TYPE"": ""1"", ""ERROR_STRIPE_COLOR"": ""ee9b70""}",orangeBg;— DEFAULT_PARAMETER-ish,7.1,Partial,True,Write occurrences: orangeBg tint
+SEARCH_RESULT_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""203020"", ""EFFECT_COLOR"": ""525150"", ""ERROR_STRIPE_COLOR"": ""92d923"", ""FONT_TYPE"": ""1"", ""FOREGROUND"": ""ffffff""}",greenBg;green,7.1,Partial,True,Search hits greenBg family
+TEXT_SEARCH_RESULT_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""253047"", ""EFFECT_COLOR"": ""424140"", ""ERROR_STRIPE_COLOR"": ""409cff""}",blueBg;blue,7.1,Partial,True,Text search blueBg
+WRITE_SEARCH_RESULT_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""302030"", ""ERROR_STRIPE_COLOR"": ""f65f87""}",violetBg,7.1,Partial,True,Write search violetBg
+FOLDED_TEXT_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""424140"", ""FOREGROUND"": ""7f7e7d""}",light2;dark8,7.1,Partial,False,Folded region dark8 bg
+INLINE_PARAMETER_HINT,explicit,,"{""BACKGROUND"": ""424140"", ""FOREGROUND"": ""969696""}",dark8,7.1,Partial,False,Param hint chip dark8
+INLINE_PARAMETER_HINT_CURRENT,explicit,,"{""BACKGROUND"": ""253047"", ""FOREGROUND"": ""fff1c9""}",blueBg,7.1,Partial,True,Current param blueBg
+INLINE_PARAMETER_HINT_HIGHLIGHTED,explicit,,"{""BACKGROUND"": ""525150"", ""FOREGROUND"": ""fcfcfa""}",dark10,7.1,Partial,False,Highlighted param dark10
+INJECTED_LANGUAGE_FRAGMENT,explicit,,"{""BACKGROUND"": ""253047"", ""EFFECT_COLOR"": ""525150""}",blueBg,7.1,Partial,True,Injection host blueBg wash
+DEFAULT_TEMPLATE_LANGUAGE_COLOR,explicit,,"{""BACKGROUND"": ""272625"", ""EFFECT_TYPE"": ""5""}",dark5,7.1,Partial,False,Template language region dark5
+DEFAULT_REASSIGNED_LOCAL_VARIABLE,explicit,,"{""EFFECT_COLOR"": ""8f8e8d"", ""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""8e8cb7""}",light3,7.1,Partial,False,Reassigned local underline light3
+DEFAULT_REASSIGNED_PARAMETER,explicit,,"{""EFFECT_COLOR"": ""8f8e8d"", ""EFFECT_TYPE"": ""1"", ""FONT_TYPE"": ""2"", ""FOREGROUND"": ""edc777""}",light3;— keep existing FG edc777,7.1,Partial,False,Keep FG; add underline
+TEXT_STYLE_ERROR,explicit,,"{""EFFECT_COLOR"": ""f25022"", ""EFFECT_TYPE"": ""5""}",— f25022 error,7.1,Partial,False,Error style dotted red
+TEXT_STYLE_WARNING,explicit,,"{""EFFECT_COLOR"": ""ffb900"", ""EFFECT_TYPE"": ""5""}",accent,7.1,Partial,False,Warning style dotted accent
+CONSOLE_RANGE_TO_EXECUTE,explicit,,"{""EFFECT_COLOR"": ""92d923""}",green,7.1,Partial,False,Range-to-execute green outline
+KOTLIN_SMART_CAST_RECEIVER,explicit,,"{""BACKGROUND"": ""203020"", ""FOREGROUND"": ""b7e66e""}",greenBg,7.1,Partial,True,Smart-cast receiver greenBg
+KOTLIN_SMART_CAST_VALUE,explicit,,"{""BACKGROUND"": ""302030"", ""FOREGROUND"": ""c9bfff""}",violetBg,7.1,Partial,True,Smart-cast value violetBg
+KOTLIN_SMART_CONSTANT,explicit,,"{""BACKGROUND"": ""320f0f"", ""FOREGROUND"": ""ed005c""}",redBg,7.1,Partial,True,Smart-cast const redBg light
+KOTLIN_MUTABLE_VARIABLE,explicit,,"{""EFFECT_COLOR"": ""8f8e8d"", ""EFFECT_TYPE"": ""1""}",light3,7.1,Partial,False,Mutable var underline light3
+NOT_TOP_FRAME_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""253047"", ""FOREGROUND"": ""f7cd46""}",blueBg;— keep existing FG,7.1,Partial,False,Non-top frame blueBg
+TODO_DEFAULT_ATTRIBUTES,explicit,,"{""ERROR_STRIPE_COLOR"": ""92d923"", ""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ffbdce""}",green,7.1,Partial,False,TODO italic + green stripe
+BOOKMARKS_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""222120"", ""ERROR_STRIPE_COLOR"": ""f5d277"", ""FOREGROUND"": ""bfbebd""}",yellowLight;dark4,7.1,Partial,False,Bookmark stripe yellowLight
+BREAKPOINT_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""320a19"", ""ERROR_STRIPE_COLOR"": ""f65f87""}",redBg family,7.1,Partial,False,Breakpoint stripe pink-red
+DELETED_TEXT_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""261b1a"", ""EFFECT_COLOR"": ""525150"", ""EFFECT_TYPE"": ""3"", ""FOREGROUND"": ""afaead""}",— DIFF_DELETED,7.1,Partial,False,Deleted text use diff deleted bg
+BAD_CHARACTER,explicit,,"{""EFFECT_COLOR"": ""f65f87"", ""EFFECT_TYPE"": ""2"", ""FOREGROUND"": ""f65f87""}",— existing effect,7.2,Partial,False,Add FG matching wave
+UNMATCHED_BRACE_ATTRIBUTES,explicit,,"{""EFFECT_COLOR"": ""ed005c"", ""FONT_TYPE"": ""1"", ""FOREGROUND"": ""f65f87""}",— keep effect,7.2,Partial,False,Add FG pink-red
+WRONG_REFERENCES_ATTRIBUTES,explicit,,"{""EFFECT_COLOR"": ""e81123"", ""EFFECT_TYPE"": ""2"", ""ERROR_STRIPE_COLOR"": ""ed005c"", ""FOREGROUND"": ""f65f87""}",— keep effects,7.2,Partial,False,Add FG
+CTRL_CLICKABLE,explicit,,"{""EFFECT_COLOR"": ""409cff"", ""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""409cff""}",blue,7.2,Partial,False,Hyperlink blue underline
+DEFAULT_INVALID_STRING_ESCAPE,explicit,,"{""EFFECT_COLOR"": ""f25022"", ""EFFECT_TYPE"": ""2"", ""FOREGROUND"": ""ee9b70""}",— keep effect f25022,7.2,Partial,False,Add FG parameter warm
+MATCHED_BRACE_ATTRIBUTES,explicit,,"{""BACKGROUND"": ""3b514d"", ""FONT_TYPE"": ""1"", ""FOREGROUND"": ""ffb900""}",accent;— keep bg 3b514d,7.2,Partial,False,Matched brace accent FG
+INACTIVE_HYPERLINK_ATTRIBUTES,explicit,,"{""EFFECT_COLOR"": ""8f8e8d"", ""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""9896ff""}",— DEFAULT_STATIC_FIELD,7.2,Partial,False,Inactive link violet
+CODE_LENS_BORDER_COLOR,explicit,,"{""BACKGROUND"": ""525150"", ""EFFECT_COLOR"": ""525150""}",dark10,7.2,Partial,True,Set both BG and EFFECT_COLOR to dark10 for platform variance
+ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES,explicit,,"{""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""b7c3""}",— keep FG,7.2,Partial,False,Add underline EFFECT_TYPE
+PROPERTIES.KEY,explicit,,"{""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""9380ff""}",— keep FG,7.2,Partial,False,Add underline on keys
+YAML_SCALAR_LIST,explicit,,"{""BACKGROUND"": ""171615"", ""EFFECT_TYPE"": ""5"", ""FOREGROUND"": ""ccbfaf""}",dark3,7.2,Partial,False,Block scalar dark3 wash
+YAML_SCALAR_VALUE,explicit,,"{""BACKGROUND"": ""171615"", ""EFFECT_TYPE"": ""5"", ""FOREGROUND"": ""ccbfaf""}",dark3,7.2,Partial,False,Scalar value dark3 wash
+HAML_TAG,explicit,,"{""BACKGROUND"": ""171615"", ""EFFECT_TYPE"": ""5"", ""FOREGROUND"": ""ff6188""}",dark3;— keep tag pink,7.2,Partial,False,HAML tag dark3
+STATIC_FINAL_FIELD_ATTRIBUTES,explicit,,"{""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""ff8c00""}",— keep ff8c00,7.2,Partial,False,Final static underline
+CONSOLE_USER_INPUT,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""b4da82""}",— keep FG,7.2,Partial,False,User input italic
+CSS.IMPORTANT,explicit,,"{""FONT_TYPE"": ""1"", ""FOREGROUND"": ""f25022""}",— keep f25022,7.2,Partial,False,!important bold
+DEFAULT_CONSTANT,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""f25022""}",— keep,7.2,Partial,False,Constants italic optional
+DEFAULT_DOC_COMMENT,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ccbfaf""}",— keep,7.2,Partial,False,Doc comments italic optional
+DEFAULT_STATIC_FIELD,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""9896ff""}",— keep,7.2,Partial,False,Static fields italic optional
+DEFAULT_STATIC_METHOD,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""b7e66e""}",— keep,7.2,Partial,False,Static methods italic optional
+DEFAULT_PARAMETER,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ee9b70""}",— keep,7.2,Partial,False,Params italic optional
+DEFAULT_METADATA,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ffb900""}",— keep,7.2,Partial,False,Metadata italic optional
+DEFAULT_GLOBAL_VARIABLE,explicit,,"{""EFFECT_TYPE"": ""5"", ""FONT_TYPE"": ""1"", ""FOREGROUND"": ""ff8c00""}",— keep,7.2,Partial,False,Global bold optional
+DEFAULT_DOC_COMMENT_TAG_VALUE,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ee9b70""}",— keep ee9b70,7.2,Partial,False,Doc tag value italic
+DEBUGGER_INLINED_VALUES_EXECUTION_LINE,explicit,,"{""FONT_TYPE"": ""2"", ""FOREGROUND"": ""ff638a""}",— keep,7.2,Partial,False,Debugger inline italic
+LINE_FULL_COVERAGE,explicit,,"{""EFFECT_TYPE"": ""2"", ""FONT_TYPE"": ""1"", ""FOREGROUND"": ""9adf66""}",— keep,7.2,Partial,False,Coverage bold
+LINE_NONE_COVERAGE,explicit,,"{""EFFECT_TYPE"": ""3"", ""FONT_TYPE"": ""1"", ""FOREGROUND"": ""f9d878""}",— keep,7.2,Partial,False,Coverage bold
+LINE_PARTIAL_COVERAGE,explicit,,"{""FONT_TYPE"": ""1"", ""FOREGROUND"": ""ef9c70""}",— keep,7.2,Partial,False,Coverage bold
+REGEXP.CHAR_CLASS,explicit,,"{""EFFECT_TYPE"": ""5"", ""FONT_TYPE"": ""1"", ""FOREGROUND"": ""ed005c""}",— keep,7.2,Partial,False,Char class bold
+IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES,explicit,,"{""EFFECT_COLOR"": ""8f8e8d"", ""EFFECT_TYPE"": ""1"", ""FOREGROUND"": ""9380ff""}",light3,7.2,Partial,False,Underline implicit param
+Scala Immutable Collection,explicit,,"{""EFFECT_TYPE"": ""5"", ""FOREGROUND"": ""b7c3""}",,7.2,Partial,False,Dotted underline
+Scala Mutable Collection,explicit,,"{""EFFECT_TYPE"": ""5"", ""FOREGROUND"": ""78dce8""}",,7.2,Partial,False,Dotted underline
+ScrollBar.thumbColor,theme_json,,"{""ui.ScrollBar.thumbColor"": ""dark8""}",dark8,8.1,theme_json,True,UI thumb dark8 to pair with hoverThumbColor dark10
+ScrollBar_Mac_ALIGN,process,,{},,8.1,theme_json,False,Align Mac scheme thumbs with theme_json ScrollBar tokens (dark8/dark10)
+samples/php/Showcase.php,process,,{},,8.2,samples,False,Sample file authoring — no color
+samples/html/Showcase.html,process,,{},,8.2,samples,False,Sample file authoring — no color
+samples/typescript/Showcase.ts,process,,{},,8.2,samples,False,Sample file authoring — no color
+samples/rust/Showcase.rs,process,,{},,8.2,samples,False,Sample file authoring — no color
+samples/csharp/Showcase.cs,process,,{},,8.2,samples,False,Sample file authoring — no color
+samples/optional_go_python_ruby,process,,{},,8.2,samples,False,Sample file authoring — no color
+screenshot_docs,process,,{},,8.3,screenshots,False,Document capture steps
+screenshot_produce,process,,{},,8.3,screenshots,False,Produce 5 language screenshots
+verify_scheme_loads,process,,{},,verify,verify,False,Verification step — not a scheme key
+verify_defaults_panel,process,,{},,verify,verify,False,Verification step — not a scheme key
+verify_showcases,process,,{},,verify,verify,False,Verification step — not a scheme key
+verify_vcs,process,,{},,verify,verify,False,Verification step — not a scheme key
+verify_search_caret,process,,{},,verify,verify,False,Verification step — not a scheme key
+verify_next_edit,process,,{},,verify,verify,False,Verification step — not a scheme key
+verify_scrollbar,process,,{},,verify,verify,False,Verification step — not a scheme key
+verify_quickdoc,process,,{},,verify,verify,False,Verification step — not a scheme key
