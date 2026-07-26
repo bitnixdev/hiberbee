@@ -837,7 +837,7 @@
     </option>
     <option name="DEFAULT_DOC_MARKUP">
       <value>
-        <option name="FOREGROUND" value="c8beb4" />
+        <option name="FOREGROUND" value="ccbfaf" />
       </value>
     </option>
     <option name="DEFAULT_DOT">
@@ -32959,7 +32959,7 @@
     </option>
     <option name="DEFAULT_SEMICOLON">
       <value>
-        <option name="FOREGROUND" value="dddedf" />
+        <option name="FOREGROUND" value="ffbdce" />
       </value>
     </option>
     <option name="DEFAULT_LOCAL_VARIABLE">
@@ -33318,7 +33318,7 @@
     </option>
     <option name="GO_SEMICOLON">
       <value>
-        <option name="FOREGROUND" value="dddedf" />
+        <option name="FOREGROUND" value="ffbdce" />
       </value>
     </option>
     <option name="GO_COLON">
