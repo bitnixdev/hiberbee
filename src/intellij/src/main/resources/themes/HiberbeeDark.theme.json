@@ -430,7 +430,8 @@
       "runningBackground": "dark5"
     },
     "ScrollBar": {
-      "hoverThumbColor": "dark10"
+      "hoverThumbColor": "dark10",
+      "thumbColor": "dark8"
     },
     "ScrollPane": {
       "background": "dark6",

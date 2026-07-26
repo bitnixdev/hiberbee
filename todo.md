@@ -31,12 +31,20 @@ Rules baked into the map: only palette tokens + hex already in `Dark.xml`; prefe
 
 ### Inventory (union of Dracula + Islands − Hiberbee)
 
-| Bucket | Count |
-|---|---|
-| Missing **colors** | **22** |
-| Missing **attributes** (fully absent) | **~275** |
-| Present attributes missing **style properties** | **~64** |
-| Hiberbee already strong (keep / extend, don’t clobber) | C# `ReSharper.*` (28), PHP specialized (13), TS (8), many `DEFAULT_*` |
+| Bucket | Count | Status (2026-07-26) |
+|---|---|---|
+| Missing **colors** | **22** | **Applied** → `Dark.xml` now 113 colors |
+| Missing **attributes** (fully absent) | **~275** | **Applied** → ~4556 attrs (was ~4280) |
+| Present attributes missing **style properties** | **~64** | **Merged** per color map |
+| Hiberbee already strong (keep / extend, don’t clobber) | C# `ReSharper.*` (28), PHP specialized (13), TS (8), many `DEFAULT_*` | Preserved |
+
+**Apply / verify:**
+
+```bash
+python3 scripts/apply_color_map.py          # idempotent
+python3 scripts/verify_scheme_applied.py    # Dark.xml matches map
+python3 scripts/verify_color_map.py         # map uses Hiberbee-only colors
+```
 
 ### Implementation rules
 
