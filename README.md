@@ -1,30 +1,63 @@
 # Hiberbee Themes
 
-## IDE
+Dark theme collection. The JetBrains plugin ships from this repository via **GitHub Releases** (custom plugin repository), same pattern as [BrainlessEnv](https://github.com/bitnixdev/BrainlessEnv).
 
-### JetBrains Family
+## JetBrains IDE
 
-[![Jetbrains Downloads](https://img.shields.io/jetbrains/plugin/d/12118-hiberbee-theme.svg?style=flat-square)](https://plugins.jetbrains.com/plugin/12118-hiberbee-theme) [![Jetbrains Plugin](https://img.shields.io/jetbrains/plugin/v/12118-hiberbee-theme.svg?style=flat-square)](https://plugins.jetbrains.com/plugin/12118-hiberbee-theme)
+### Install (updates from GitHub)
 
-#### Editor
+1. `Settings → Plugins → ⚙ → Manage Plugin Repositories… → +`
+2. Add:
+   ```
+   https://github.com/bitnixdev/hiberbee/releases/latest/download/updatePlugins.xml
+   ```
+3. Search the Plugins marketplace tab for **Hiberbee Theme** and install.
+4. Restart when prompted. Future releases update through that repository URL.
 
-![IDE](https://github.com/hiberbee/jetbrains-ide-theme/raw/latest/screenshots/ide.png)
+### Install from disk (one-off)
 
-#### Color Scheme
+1. Download `hiberbee-theme-<version>.zip` from the [latest release](https://github.com/bitnixdev/hiberbee/releases/latest), or build locally:
+   ```sh
+   cd src/intellij
+   ./gradlew buildPlugin
+   # → build/distributions/hiberbee-theme-<version>.zip
+   ```
+2. `Settings → Plugins → ⚙ → Install Plugin from Disk…` and pick the zip.
 
-![Code](https://github.com/hiberbee/jetbrains-ide-theme/raw/latest/screenshots/code.png)
+### Release
 
-### Insomnia
+One workflow (`.github/workflows/ci.yml`):
 
-![Screenshot 1](https://github.com/hiberbee/insomnia-theme/raw/main/screenshots/screenshot-1.png)
+- **PR** — builds the plugin zip (artifact only)
+- **push to `master`** (or **workflow_dispatch**) — builds, tags, and publishes a GitHub Release
 
-## Terminals
+Tag / version format (CalVer + git commit count):
 
-### Windows Terminal
+```text
+vYYYY.MM.DD.<rev-list --count HEAD>
+# example: v2026.07.26.1842
+```
 
-See [official documentation](https://learn.microsoft.com/en-us/windows/terminal/custom-terminal-gallery/custom-schemes) and checkout the content of [settings.json](https://github.com/hiberbee/jetbrains-ide-theme/raw/latest/src/windows-terminal/settings.json)
+Release assets: `hiberbee-theme-<version>.zip`, `.sha256`, `updatePlugins.xml` (IDE updates via the custom repository URL above).
 
+```sh
+# local check
+cd src/intellij
+./gradlew buildPlugin generateUpdatePluginsXml
+```
+
+
+### Screenshots
+
+![IDE](screenshots/ide.png)
+
+![Code](screenshots/code.png)
+
+## Other platforms
+
+Terminals, VS Code, Insomnia, etc. live under `src/`. See each subdirectory for install notes.
 
 ## Resources
 
-- [Figma](https://www.figma.com/file/2oyhOnKUdLZCDQEkH2klNT/Hiberbee-Theme)
+- [Figma palette](https://www.figma.com/file/2oyhOnKUdLZCDQEkH2klNT/Hiberbee-Theme)
+- Marketplace listing (legacy): [Hiberbee Theme](https://plugins.jetbrains.com/plugin/12118-hiberbee-theme)

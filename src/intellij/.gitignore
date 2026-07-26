@@ -1,3 +1,5 @@
-/.gradle
-/build
+/.gradle/
+/build/
+/.intellijPlatform/
 /local.properties
+*.log

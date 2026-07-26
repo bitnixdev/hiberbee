@@ -4,7 +4,7 @@
   "icon": "icon.png",
   "version": "0.7.1",
   "repository": {
-    "url": "https://github.com/hiberbee/themes",
+    "url": "https://github.com/bitnixdev/hiberbee",
     "type": "git",
     "directory": "src/vscode"
   },

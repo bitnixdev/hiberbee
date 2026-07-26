@@ -1,45 +1,119 @@
-import java.time.OffsetDateTime
-
 plugins {
-  id("java")
-  id("org.jetbrains.intellij") version "1.16.0"
-  id("com.github.ben-manes.versions") version "0.49.0"
+  id 'java'
+  id 'org.jetbrains.intellij.platform' version '2.18.1'
 }
 
-group = "com.hiberbee"
-version = System.getenv("APP_VERSION") ?: OffsetDateTime.now().format("YYYY.M.d.Hm")
+group = providers.gradleProperty('pluginGroup').get()
+version = providers.gradleProperty('pluginVersion').get()
 
 repositories {
   mavenCentral()
-}
-
-intellij {
-  pluginName ="Hiberbee Theme"
-  type = "IU"
-  version = "LATEST-EAP-SNAPSHOT"
-  updateSinceUntilBuild = false
+  intellijPlatform {
+    defaultRepositories()
+  }
 }
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_17
-  targetCompatibility = JavaVersion.VERSION_17
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(providers.gradleProperty('javaVersion').get().toInteger())
+  }
 }
 
-buildSearchableOptions {
-  enabled = false
+dependencies {
+  intellijPlatform {
+    create(
+      providers.gradleProperty('platformType').get(),
+      providers.gradleProperty('platformVersion').get()
+    )
+  }
 }
 
-publishPlugin {
-  setToken(System.getenv("JETBRAINS_TOKEN"))
+intellijPlatform {
+  pluginConfiguration {
+    id = providers.gradleProperty('pluginGroup')
+    name = providers.gradleProperty('pluginName')
+    version = providers.gradleProperty('pluginVersion')
+    ideaVersion {
+      sinceBuild = providers.gradleProperty('pluginSinceBuild')
+      def until = providers.gradleProperty('pluginUntilBuild')
+      if (until.isPresent() && !until.get().trim().isEmpty()) {
+        untilBuild = until
+      }
+    }
+  }
 }
 
-runIdePerformanceTest {
- testDataDir = rootProject.files("src/test/java").getAsPath()
+tasks.named('wrapper') {
+  gradleVersion = '9.5.0'
 }
 
-patchPluginXml {
-  changeNotes = """
-- Fixed mess up around color scheme provided (#108)
-"""
-  version = project.version
+/**
+ * Custom plugin repository descriptor for GitHub Releases.
+ * IDE: Settings → Plugins → ⚙ → Manage Plugin Repositories →
+ *   https://github.com/bitnixdev/hiberbee/releases/latest/download/updatePlugins.xml
+ */
+abstract class GenerateUpdatePluginsXml extends DefaultTask {
+  @Input abstract Property<String> getPluginId()
+  @Input abstract Property<String> getPluginName()
+  @Input abstract Property<String> getPluginVersion()
+  @Input abstract Property<String> getSinceBuild()
+  @Input abstract Property<String> getUntilBuild()
+  @Input abstract Property<String> getDownloadUrl()
+  @Input abstract Property<String> getVendorEmail()
+  @Input abstract Property<String> getVendorUrl()
+  @Input abstract Property<String> getVendorName()
+  @Input abstract Property<String> getDescriptionHtml()
+  @Input abstract Property<String> getChangeNotesHtml()
+  @OutputFile abstract RegularFileProperty getOutputFile()
+
+  @TaskAction
+  void run() {
+    def until = untilBuild.getOrElse('').trim()
+    def untilAttr = until ? " until-build=\"${until}\"" : ''
+    outputFile.get().asFile.text = """\
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins>
+    <plugin id="${pluginId.get()}"
+            url="${downloadUrl.get()}"
+            version="${pluginVersion.get()}">
+        <name>${pluginName.get()}</name>
+        <vendor email="${vendorEmail.get()}" url="${vendorUrl.get()}">${vendorName.get()}</vendor>
+        <description><![CDATA[${descriptionHtml.get()}]]></description>
+        <change-notes><![CDATA[${changeNotesHtml.get()}]]></change-notes>
+        <idea-version since-build="${sinceBuild.get()}"${untilAttr}/>
+    </plugin>
+</plugins>
+""".stripIndent()
+  }
+}
+
+tasks.register('generateUpdatePluginsXml', GenerateUpdatePluginsXml) {
+  group = 'distribution'
+  description = 'Generate updatePlugins.xml for a custom JetBrains plugin repository (GitHub Releases).'
+
+  def ver = providers.gradleProperty('pluginVersion')
+  def repo = providers.gradleProperty('githubRepo')
+
+  pluginId.set(providers.gradleProperty('pluginGroup'))
+  pluginName.set(providers.gradleProperty('pluginName'))
+  pluginVersion.set(ver)
+  sinceBuild.set(providers.gradleProperty('pluginSinceBuild'))
+  untilBuild.set(providers.gradleProperty('pluginUntilBuild').orElse(''))
+  downloadUrl.set(
+    ver.zip(repo) { v, r ->
+      "https://github.com/${r}/releases/download/v${v}/hiberbee-theme-${v}.zip"
+    }
+  )
+  vendorEmail.set('vlad@hiberbee.com')
+  vendorUrl.set('https://github.com/bitnixdev/hiberbee')
+  vendorName.set('Hiberbee')
+  descriptionHtml.set(
+    'Vivid, color-intensive dark theme for JetBrains IDEs with a consolidated color map across languages.'
+  )
+  changeNotesHtml.set(
+    ver.zip(repo) { v, r ->
+      "See <a href=\"https://github.com/${r}/releases/tag/v${v}\">release notes</a>."
+    }
+  )
+  outputFile.set(layout.buildDirectory.file('updatePlugins.xml'))
 }

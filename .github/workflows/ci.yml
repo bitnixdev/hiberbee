@@ -1,0 +1,123 @@
+name: CI
+
+# Single workflow:
+# - PR / any push: build the plugin
+# - master push (or manual dispatch): tag vYYYY.MM.DD.<commit_count>, GitHub Release
+#   with zip + updatePlugins.xml for JetBrains custom plugin repository updates
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version override (blank = YYYY.MM.DD.<git commit count>)'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  plugin:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/intellij
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve version
+        id: ver
+        run: |
+          set -euo pipefail
+          override="${{ github.event.inputs.version }}"
+          if [ -n "${override:-}" ]; then
+            v="${override#v}"
+          else
+            calver="$(date -u +%Y.%m.%d)"
+            rev_id="$(git rev-list --count HEAD)"
+            v="${calver}.${rev_id}"
+          fi
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          echo "tag=v$v" >> "$GITHUB_OUTPUT"
+          echo "zip=hiberbee-theme-$v.zip" >> "$GITHUB_OUTPUT"
+          echo "Resolved version=$v"
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: zulu
+          java-version: '21'
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build plugin + updatePlugins.xml
+        run: ./gradlew --no-configuration-cache -PpluginVersion=${{ steps.ver.outputs.version }} buildPlugin generateUpdatePluginsXml
+
+      - name: Package release assets
+        id: dist
+        run: |
+          set -euo pipefail
+          zip_name="${{ steps.ver.outputs.zip }}"
+          f="build/distributions/${zip_name}"
+          if [ ! -f "$f" ]; then
+            echo "Expected $f; distributions:"
+            ls -la build/distributions || true
+            src="$(ls build/distributions/*.zip | head -1)"
+            cp "$src" "$f"
+          fi
+          test -f "$f"
+          sha256sum "$f" | tee "${f}.sha256"
+          test -f build/updatePlugins.xml
+
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: plugin-zip
+          path: |
+            src/intellij/build/distributions/${{ steps.ver.outputs.zip }}
+            src/intellij/build/updatePlugins.xml
+          if-no-files-found: error
+
+      - name: Tag and publish GitHub Release
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # tag from repo root
+          cd "${GITHUB_WORKSPACE}"
+          tag="${{ steps.ver.outputs.tag }}"
+          version="${{ steps.ver.outputs.version }}"
+          zip_name="${{ steps.ver.outputs.zip }}"
+
+          if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
+            echo "Tag ${tag} already exists — updating release assets only."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git tag -a "${tag}" -m "Release ${version}"
+            git push origin "refs/tags/${tag}"
+          fi
+
+          # Create or replace release assets (idempotent enough for re-runs)
+          if gh release view "${tag}" >/dev/null 2>&1; then
+            gh release upload "${tag}" \
+              "src/intellij/build/distributions/${zip_name}" \
+              "src/intellij/build/distributions/${zip_name}.sha256" \
+              "src/intellij/build/updatePlugins.xml" \
+              --clobber
+          else
+            gh release create "${tag}" \
+              --title "${tag}" \
+              --generate-notes \
+              "src/intellij/build/distributions/${zip_name}" \
+              "src/intellij/build/distributions/${zip_name}.sha256" \
+              "src/intellij/build/updatePlugins.xml"
+          fi

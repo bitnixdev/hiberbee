@@ -4,3 +4,8 @@ colorSchemeTool.log
 node_modules
 tsconfig.tsbuildinfo
 .yarn/install-state.gz
+
+# Gradle / IntelliJ Platform build outputs (never commit)
+**/.gradle/
+**/build/
+**/.intellijPlatform/
